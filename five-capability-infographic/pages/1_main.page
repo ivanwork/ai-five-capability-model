@@ -1,0 +1,729 @@
+pageType: content
+background:
+  type: image
+  src: media/bg.png
+  fit: {mode: fill}
+elements:
+  # ===== 页眉 =====
+  - elementId: topbar
+    elementType: text
+    bounds: [64, 48, 640, 22]
+    content:
+      fontSize: 13
+      color: "$dim"
+      letterSpacing: 4
+      wrap: false
+      align: [left, middle]
+      text: FIVE-CAPABILITY MODEL · FOR THE AI ERA
+  - elementId: vertag-box
+    elementType: shape
+    bounds: [868, 40, 148, 34]
+    shapeName: roundRect
+    adjustments: [50000]
+    border: {style: solid, width: 1, color: "$ink"}
+  - elementId: vertag-text
+    elementType: text
+    bounds: [868, 40, 148, 34]
+    content:
+      fontSize: 14
+      fontFamily: 汇文明朝体
+      color: "$ink"
+      align: [center, middle]
+      wrap: false
+      text: 定稿版 V1.0
+  - elementId: title
+    elementType: text
+    bounds: [64, 96, 952, 76]
+    content:
+      fontSize: 56
+      fontFamily: 汇文明朝体
+      color: "$ink"
+      wrap: false
+      align: [left, middle]
+      text: AI 时代个人五能力模型
+  - elementId: subtitle
+    elementType: text
+    bounds: [64, 184, 952, 26]
+    content:
+      fontSize: 18
+      color: "$dim"
+      wrap: false
+      align: [left, middle]
+      text: 面向个人的规范性框架 · 公理化表述 · 可证伪、可推翻、可优化
+  - elementId: div1
+    elementType: shape
+    bounds: [64, 238, 952, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+
+  # ===== 01 前提 =====
+  - elementId: sec1
+    elementType: text
+    bounds: [64, 272, 500, 24]
+    content:
+      style: "$sec"
+      wrap: false
+      align: [left, middle]
+      text: 01 · 前提 PREMISE
+  - elementId: premise-big
+    elementType: text
+    bounds: [64, 308, 952, 56]
+    content:
+      fontSize: 38
+      fontFamily: 汇文明朝体
+      color: "$accent"
+      wrap: false
+      align: [left, middle]
+      text: AI 是放大器：放大你的能力，也放大你的缺失。
+  - elementId: prem-label
+    elementType: text
+    bounds: [64, 380, 400, 20]
+    content:
+      fontSize: 14
+      color: "$faint"
+      wrap: false
+      align: [left, middle]
+      text: 精确定义 · 形式化表述
+  - elementId: premise-def
+    elementType: text
+    bounds: [64, 404, 952, 44]
+    content:
+      fontFamily: 汇文明朝体
+      wrap: false
+      align: [left, middle]
+      text: |
+        <p><span style="font-size:30px; color:$ink">AI</span><span style="font-size:30px; color:$ink"> ＝ </span><span style="font-size:30px; color:$accent">±</span><span style="font-size:34px; color:$ink">Σ</span><sup><span style="font-size:15px; color:$dim">n→∞</span></sup><span style="font-size:24px; color:$ink">（意图 ＋ 倾向 ＋ 能力 ＋ 偏差 ＋ ⋯ ＋ n）</span></p>
+  - elementId: prem-tail
+    elementType: text
+    bounds: [64, 454, 952, 18]
+    content:
+      fontSize: 13
+      color: "$faint"
+      wrap: false
+      align: [left, middle]
+      text: "± ：正向与负向皆有可能——放大人的意图、倾向、能力与偏差，也放大组织的流程与制度；后果的方向由人判断和负责。"
+  - elementId: premise-meta
+    elementType: text
+    bounds: [64, 480, 952, 22]
+    content:
+      fontSize: 13
+      color: "$dim"
+      wrap: false
+      align: [left, middle]
+      text: 元前提：本框架可证伪、可被推翻、可被优化；公理不作盾牌——出现矛盾案例、反事实场景时，重新评估框架本身。
+  - elementId: div2
+    elementType: shape
+    bounds: [64, 514, 952, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+
+  # ===== 02 负效应表 =====
+  - elementId: sec2
+    elementType: text
+    bounds: [64, 548, 700, 24]
+    content:
+      style: "$sec"
+      wrap: false
+      align: [left, middle]
+      text: 02 · 负效应 ＝ 缺失被放大
+  - elementId: neg-table
+    elementType: table
+    bounds: [64, 584, 952, 396]
+    columnWidths: [0.42, 0.58]
+    rowHeights: [0.12, 0.176, 0.176, 0.176, 0.176, 0.176]
+    style:
+      cellStyle:
+        fontSize: 15
+        fontFamily: 更纱黑体
+        color: "$ink"
+        fill: {type: solid, color: "$panel"}
+        border: {style: solid, width: 1, color: "$line"}
+        align: [left, middle]
+        lineHeight: 1.4
+      firstRowStyle:
+        fill: {type: solid, color: "$panel2"}
+        color: "$accent"
+        bold: true
+        fontSize: 15
+        align: [left, middle]
+    rows:
+      - - text: 典型的"人用 AI 负效应"
+        - text: 被放大的缺失
+      - - text: 整个 PDF / Excel 直接丢给 AI，乱烧 token
+        - text: |
+            <p><span style="color:$meta">元认知</span>：没判断任务该如何拆解、该投喂什么</p>
+      - - text: "「修一下这个问题」，不给边界和约定"
+        - text: |
+            <p><span style="color:$comm">沟通表达</span>：意图与约束没有传递给 AI</p>
+      - - text: 开发出自己不懂、不会安全部署的 web 应用
+        - text: |
+            <p><span style="color:$meta">元认知</span>能力边界失守 ＋ <span style="color:$gov">系统治理</span>上线规则缺失</p>
+      - - text: 把流畅的答案当成正确的答案
+        - text: |
+            <p><span style="color:$meta">元认知</span>：置信度超过证据，未触发验证（执行归<span style="color:$logic">逻辑判断</span>）</p>
+      - - text: 事事问 AI，原有技能退化
+        - text: |
+            <p><span style="color:$meta">元认知</span>：依赖与授权失去校准；分工缺失时归<span style="color:$collab">协作编排</span></p>
+  - elementId: div3
+    elementType: shape
+    bounds: [64, 1018, 952, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+
+  # ===== 03 五张能力卡片 =====
+  - elementId: sec3
+    elementType: text
+    bounds: [64, 1052, 700, 24]
+    content:
+      style: "$sec"
+      wrap: false
+      align: [left, middle]
+      text: 03 · 五项能力 · 五个回路
+
+  # ---- 卡片 ① 元认知 ----
+  - elementId: c1-panel
+    elementType: shape
+    bounds: [64, 1092, 952, 196]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill: {type: solid, color: "$panel"}
+    border: {style: solid, width: 1.2, color: "$meta"}
+  - elementId: c1-bar
+    elementType: shape
+    bounds: [66, 1108, 5, 164]
+    shapeName: rect
+    fill: {type: solid, color: "$meta"}
+  - elementId: c1-ghost
+    elementType: text
+    bounds: [846, 1100, 170, 64]
+    content:
+      fontSize: 52
+      fontFamily: 汇文明朝体
+      color: "#6A579955"
+      wrap: false
+      align: [right, middle]
+      text: "01"
+  - elementId: c1-name
+    elementType: text
+    bounds: [96, 1112, 240, 38]
+    content:
+      fontSize: 28
+      fontFamily: 汇文明朝体
+      color: "$ink"
+      wrap: false
+      align: [left, middle]
+      text: 元认知能力
+  - elementId: c1-chip
+    elementType: shape
+    bounds: [344, 1118, 104, 28]
+    shapeName: roundRect
+    adjustments: [50000]
+    border: {style: solid, width: 1, color: "$meta"}
+  - elementId: c1-chip-t
+    elementType: text
+    bounds: [344, 1118, 104, 28]
+    content:
+      fontSize: 14
+      color: "$meta"
+      wrap: false
+      align: [center, middle]
+      text: 校准回路
+  - elementId: c1-q
+    elementType: text
+    bounds: [96, 1158, 888, 24]
+    content:
+      fontSize: 16
+      color: "$sub"
+      wrap: false
+      align: [left, middle]
+      text: |
+        <p><span style="color:$meta">核心问题</span>｜我是否正确认识了自己、AI 和当前任务的边界？</p>
+  - elementId: c1-caps
+    elementType: text
+    bounds: [96, 1188, 888, 88]
+    content:
+      style: "$caps"
+      align: [left, top]
+      text: |
+        <p>知所知与知所不知（含意图维度） · 置信度自我陈述 · 觉察自身易被架空的倾向 · 校准对 AI 的依赖与授权（可陈述性）</p>
+        <p>自我抽离与第三视角 · 三重校准 · 更新心智模型</p>
+        <p><span style="font-size:13px; color:$faint">其他能力的个人控制回路，但不包含其他能力的内容</span></p>
+
+  # ---- 卡片 ② 逻辑判断 ----
+  - elementId: c2-panel
+    elementType: shape
+    bounds: [96, 1310, 920, 196]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill: {type: solid, color: "$panel2"}
+    border: {style: solid, width: 1.2, color: "$logic"}
+  - elementId: c2-bar
+    elementType: shape
+    bounds: [98, 1326, 5, 164]
+    shapeName: rect
+    fill: {type: solid, color: "$logic"}
+  - elementId: c2-ghost
+    elementType: text
+    bounds: [796, 1318, 170, 64]
+    content:
+      fontSize: 52
+      fontFamily: 汇文明朝体
+      color: "#2F6B8A55"
+      wrap: false
+      align: [right, middle]
+      text: "02"
+  - elementId: c2-name
+    elementType: text
+    bounds: [128, 1330, 240, 38]
+    content:
+      fontSize: 28
+      fontFamily: 汇文明朝体
+      color: "$ink"
+      wrap: false
+      align: [left, middle]
+      text: 逻辑判断能力
+  - elementId: c2-chip
+    elementType: shape
+    bounds: [400, 1336, 104, 28]
+    shapeName: roundRect
+    adjustments: [50000]
+    border: {style: solid, width: 1, color: "$logic"}
+  - elementId: c2-chip-t
+    elementType: text
+    bounds: [400, 1336, 104, 28]
+    content:
+      fontSize: 14
+      color: "$logic"
+      wrap: false
+      align: [center, middle]
+      text: 判断回路
+  - elementId: c2-q
+    elementType: text
+    bounds: [128, 1376, 856, 24]
+    content:
+      fontSize: 16
+      color: "$sub"
+      wrap: false
+      align: [left, middle]
+      text: |
+        <p><span style="color:$logic">核心问题</span>｜问题是否被正确理解，证据和推理是否足以支持当前结论？</p>
+  - elementId: c2-caps
+    elementType: text
+    bounds: [128, 1406, 856, 88]
+    content:
+      style: "$caps"
+      align: [left, top]
+      text: |
+        <p>问题定义与重定义 · 结构化与因果分析（含系统理解） · 假设与替代方案生成 · 事实／推测／观点／价值分离</p>
+        <p>价值冲突显式分析 · 证据质量判断（含 AI 输出核验） · 隐含前提与逻辑跳跃 · 反例与边界条件 · 设计验收标准</p>
+
+  # ---- 卡片 ③ 沟通表达 ----
+  - elementId: c3-panel
+    elementType: shape
+    bounds: [64, 1528, 952, 196]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill: {type: solid, color: "$panel"}
+    border: {style: solid, width: 1.2, color: "$comm"}
+  - elementId: c3-bar
+    elementType: shape
+    bounds: [66, 1544, 5, 164]
+    shapeName: rect
+    fill: {type: solid, color: "$comm"}
+  - elementId: c3-ghost
+    elementType: text
+    bounds: [846, 1536, 170, 64]
+    content:
+      fontSize: 52
+      fontFamily: 汇文明朝体
+      color: "#49785A55"
+      wrap: false
+      align: [right, middle]
+      text: "03"
+  - elementId: c3-name
+    elementType: text
+    bounds: [96, 1548, 240, 38]
+    content:
+      fontSize: 28
+      fontFamily: 汇文明朝体
+      color: "$ink"
+      wrap: false
+      align: [left, middle]
+      text: 沟通表达能力
+  - elementId: c3-chip
+    elementType: shape
+    bounds: [344, 1554, 104, 28]
+    shapeName: roundRect
+    adjustments: [50000]
+    border: {style: solid, width: 1, color: "$comm"}
+  - elementId: c3-chip-t
+    elementType: text
+    bounds: [344, 1554, 104, 28]
+    content:
+      fontSize: 14
+      color: "$comm"
+      wrap: false
+      align: [center, middle]
+      text: 对齐回路
+  - elementId: c3-q
+    elementType: text
+    bounds: [96, 1594, 888, 24]
+    content:
+      fontSize: 16
+      color: "$sub"
+      wrap: false
+      align: [left, middle]
+      text: |
+        <p><span style="color:$comm">核心问题</span>｜人和 AI 是否正确理解了彼此的意图、约束和判断？</p>
+  - elementId: c3-caps
+    elementType: text
+    bounds: [96, 1624, 888, 88]
+    content:
+      style: "$caps"
+      align: [left, top]
+      text: |
+        <p>倾听与意图识别 · 澄清模糊与歧义 · 提供上下文（词穷时用例子、参照物、草图） · 结构化表达 · 面向对象调整表达</p>
+        <p>把抽象判断转化为可执行要求 · 如实表达不确定性与证据强度 · 人类语言／AI 指令语义转换 · 反馈驱动的表达迭代</p>
+
+  # ---- 卡片 ④ 协作编排 ----
+  - elementId: c4-panel
+    elementType: shape
+    bounds: [96, 1746, 920, 196]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill: {type: solid, color: "$panel2"}
+    border: {style: solid, width: 1.2, color: "$collab"}
+  - elementId: c4-bar
+    elementType: shape
+    bounds: [98, 1762, 5, 164]
+    shapeName: rect
+    fill: {type: solid, color: "$collab"}
+  - elementId: c4-ghost
+    elementType: text
+    bounds: [796, 1754, 170, 64]
+    content:
+      fontSize: 52
+      fontFamily: 汇文明朝体
+      color: "#B27A2A55"
+      wrap: false
+      align: [right, middle]
+      text: "04"
+  - elementId: c4-name
+    elementType: text
+    bounds: [128, 1766, 240, 38]
+    content:
+      fontSize: 28
+      fontFamily: 汇文明朝体
+      color: "$ink"
+      wrap: false
+      align: [left, middle]
+      text: 协作编排能力
+  - elementId: c4-chip
+    elementType: shape
+    bounds: [400, 1772, 104, 28]
+    shapeName: roundRect
+    adjustments: [50000]
+    border: {style: solid, width: 1, color: "$collab"}
+  - elementId: c4-chip-t
+    elementType: text
+    bounds: [400, 1772, 104, 28]
+    content:
+      fontSize: 14
+      color: "$collab"
+      wrap: false
+      align: [center, middle]
+      text: 行动回路
+  - elementId: c4-q
+    elementType: text
+    bounds: [128, 1812, 856, 24]
+    content:
+      fontSize: 16
+      color: "$sub"
+      wrap: false
+      align: [left, middle]
+      text: |
+        <p><span style="color:$collab">核心问题</span>｜如何使人、AI 和工具不是各自工作，而是形成共同完成机制？</p>
+  - elementId: c4-caps
+    elementType: text
+    bounds: [128, 1842, 856, 88]
+    content:
+      style: "$caps"
+      align: [left, top]
+      text: |
+        <p>任务编排：任务拆解 · 人机分工（含不可外包保留区） · 交接接口（防一比特确认） · 反馈闭环 · 依赖与异常管理</p>
+        <p>关系协作：共同目标 · 信任与心理安全 · 协商与冲突处理 · 防止责任转移（对象为人类合作者）</p>
+        <p><span style="font-size:13px; color:$faint">两个子维度分开评分、不合成总分</span></p>
+
+  # ---- 卡片 ⑤ 系统治理 ----
+  - elementId: c5-panel
+    elementType: shape
+    bounds: [64, 1964, 952, 196]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill: {type: solid, color: "$panel"}
+    border: {style: solid, width: 1.2, color: "$gov"}
+  - elementId: c5-bar
+    elementType: shape
+    bounds: [66, 1980, 5, 164]
+    shapeName: rect
+    fill: {type: solid, color: "$gov"}
+  - elementId: c5-ghost
+    elementType: text
+    bounds: [846, 1972, 170, 64]
+    content:
+      fontSize: 52
+      fontFamily: 汇文明朝体
+      color: "#9E4A4455"
+      wrap: false
+      align: [right, middle]
+      text: "05"
+  - elementId: c5-name
+    elementType: text
+    bounds: [96, 1984, 240, 38]
+    content:
+      fontSize: 28
+      fontFamily: 汇文明朝体
+      color: "$ink"
+      wrap: false
+      align: [left, middle]
+      text: 系统治理能力
+  - elementId: c5-chip
+    elementType: shape
+    bounds: [344, 1990, 104, 28]
+    shapeName: roundRect
+    adjustments: [50000]
+    border: {style: solid, width: 1, color: "$gov"}
+  - elementId: c5-chip-t
+    elementType: text
+    bounds: [344, 1990, 104, 28]
+    content:
+      fontSize: 14
+      color: "$gov"
+      wrap: false
+      align: [center, middle]
+      text: 约束回路
+  - elementId: c5-q
+    elementType: text
+    bounds: [96, 2030, 888, 24]
+    content:
+      fontSize: 16
+      color: "$sub"
+      wrap: false
+      align: [left, middle]
+      text: |
+        <p><span style="color:$gov">核心问题</span>｜如何让"自己＋AI＋工具"组成的系统长期有效而不失控？</p>
+  - elementId: c5-caps
+    elementType: text
+    bounds: [96, 2060, 888, 88]
+    content:
+      style: "$caps"
+      align: [left, top]
+      text: |
+        <p>个人 AI 使用规则（含创设判断） · 复核与质量门 · 数据与隐私边界 · 最小授权 · 个人 SOP · 异常与回滚机制</p>
+        <p>决策升级路径 · 定期复盘与改进（含规则存量体检）　<span style="font-size:13px; color:$faint">个人没有组织权力，但可以治理自己的系统</span></p>
+  - elementId: div4
+    elementType: shape
+    bounds: [64, 2192, 952, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+
+  # ===== 04 模型结构 =====
+  - elementId: sec4
+    elementType: text
+    bounds: [64, 2224, 500, 24]
+    content:
+      style: "$sec"
+      wrap: false
+      align: [left, middle]
+      text: 04 · 模型结构
+  - elementId: st-top
+    elementType: shape
+    bounds: [240, 2260, 600, 54]
+    shapeName: roundRect
+    adjustments: [16000]
+    fill: {type: solid, color: "$panel2"}
+    border: {style: solid, width: 1.5, color: "$meta"}
+  - elementId: st-top-t
+    elementType: text
+    bounds: [240, 2260, 600, 54]
+    content:
+      fontSize: 18
+      fontFamily: 汇文明朝体
+      color: "$meta"
+      wrap: false
+      align: [center, middle]
+      text: 元认知 · 个人控制回路（持续监控）
+  - elementId: st-arrow1
+    elementType: icon
+    bounds: [528, 2318, 24, 26]
+    iconName: "fas:arrow-down"
+    fill: {type: solid, color: "$meta"}
+  - elementId: st-chip1
+    elementType: shape
+    bounds: [76, 2348, 280, 56]
+    shapeName: roundRect
+    adjustments: [16000]
+    fill: {type: solid, color: "$panel"}
+    border: {style: solid, width: 1.5, color: "$logic"}
+  - elementId: st-chip1-t
+    elementType: text
+    bounds: [76, 2348, 280, 56]
+    content:
+      align: [center, middle]
+      text: |
+        <p style="text-align:center"><span style="font-size:19px; color:$ink; font-family:汇文明朝体">逻辑判断</span></p>
+        <p style="text-align:center"><span style="font-size:12px; color:$dim">判断回路</span></p>
+  - elementId: st-chip2
+    elementType: shape
+    bounds: [400, 2348, 280, 56]
+    shapeName: roundRect
+    adjustments: [16000]
+    fill: {type: solid, color: "$panel"}
+    border: {style: solid, width: 1.5, color: "$comm"}
+  - elementId: st-chip2-t
+    elementType: text
+    bounds: [400, 2348, 280, 56]
+    content:
+      align: [center, middle]
+      text: |
+        <p style="text-align:center"><span style="font-size:19px; color:$ink; font-family:汇文明朝体">沟通表达</span></p>
+        <p style="text-align:center"><span style="font-size:12px; color:$dim">对齐回路</span></p>
+  - elementId: st-chip3
+    elementType: shape
+    bounds: [724, 2348, 280, 56]
+    shapeName: roundRect
+    adjustments: [16000]
+    fill: {type: solid, color: "$panel"}
+    border: {style: solid, width: 1.5, color: "$collab"}
+  - elementId: st-chip3-t
+    elementType: text
+    bounds: [724, 2348, 280, 56]
+    content:
+      align: [center, middle]
+      text: |
+        <p style="text-align:center"><span style="font-size:19px; color:$ink; font-family:汇文明朝体">协作编排</span></p>
+        <p style="text-align:center"><span style="font-size:12px; color:$dim">行动回路</span></p>
+  - elementId: st-link1
+    elementType: shape
+    bounds: [358, 2370, 40, 12]
+    shapeName: leftRightArrow
+    adjustments: [42000, 42000]
+    fill: {type: solid, color: "$dim"}
+  - elementId: st-link2
+    elementType: shape
+    bounds: [682, 2370, 40, 12]
+    shapeName: leftRightArrow
+    adjustments: [42000, 42000]
+    fill: {type: solid, color: "$dim"}
+  - elementId: st-mid-cap
+    elementType: text
+    bounds: [64, 2412, 952, 20]
+    content:
+      fontSize: 13
+      color: "$faint"
+      wrap: false
+      align: [center, middle]
+      text: 运行层 · 循环互动
+  - elementId: st-arrow2
+    elementType: shape
+    bounds: [526, 2436, 28, 20]
+    shapeName: triangle
+    flip: [false, true]
+    fill: {type: solid, color: "$gov"}
+  - elementId: st-bottom
+    elementType: shape
+    bounds: [240, 2462, 600, 54]
+    shapeName: roundRect
+    adjustments: [16000]
+    fill: {type: solid, color: "$panel2"}
+    border: {style: solid, width: 1.5, color: "$gov"}
+  - elementId: st-bottom-t
+    elementType: text
+    bounds: [240, 2462, 600, 54]
+    content:
+      fontSize: 18
+      fontFamily: 汇文明朝体
+      color: "$gov"
+      wrap: false
+      align: [center, middle]
+      text: 系统治理 · 系统约束回路（持续约束）
+  - elementId: st-base
+    elementType: shape
+    bounds: [64, 2538, 952, 46]
+    shapeName: roundRect
+    adjustments: [16000]
+    border: {style: dash, width: 1, color: "#C9BEA6"}
+  - elementId: st-base-t
+    elementType: text
+    bounds: [64, 2538, 952, 46]
+    content:
+      fontSize: 15
+      color: "$dim"
+      wrap: false
+      align: [center, middle]
+      text: 现实基础层｜领域知识 · 专业技能 · 工具 · 经验（被调节的基础层）
+  - elementId: st-out
+    elementType: text
+    bounds: [64, 2600, 952, 24]
+    content:
+      fontSize: 14
+      color: "$sub"
+      wrap: false
+      align: [center, middle]
+      text: 输出｜判断 · 学习 · 创造 · 协作 · 交付 · 改进　　反馈｜现实结果重新进入元认知与治理回路
+
+  # ===== 口号收尾（含出处映射） =====
+  - elementId: div5
+    elementType: shape
+    bounds: [64, 2652, 952, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+  - elementId: slogan
+    elementType: text
+    bounds: [64, 2670, 952, 40]
+    content:
+      fontSize: 28
+      fontFamily: 汇文明朝体
+      wrap: false
+      align: [center, middle]
+      text: |
+        <p style="text-align:center"><span style="color:$accent">看见放大</span><span style="color:$faint"> · </span><span style="color:$meta">校准</span><span style="color:$logic">判断</span><span style="color:$faint"> · </span><span style="color:$comm">对齐理解</span><span style="color:$faint"> · </span><span style="color:$collab">组织行动</span><span style="color:$faint"> · </span><span style="color:$gov">约束后果</span></p>
+  - elementId: tag1
+    elementType: text
+    bounds: [64, 2714, 190, 18]
+    content: {fontSize: 11, color: "$faint", wrap: false, align: [center, middle], text: 前　提}
+  - elementId: tag2
+    elementType: text
+    bounds: [254, 2714, 191, 18]
+    content: {fontSize: 11, color: "$faint", wrap: false, align: [center, middle], text: 元认知 × 逻辑判断}
+  - elementId: tag3
+    elementType: text
+    bounds: [445, 2714, 190, 18]
+    content: {fontSize: 11, color: "$faint", wrap: false, align: [center, middle], text: 沟通表达}
+  - elementId: tag4
+    elementType: text
+    bounds: [635, 2714, 191, 18]
+    content: {fontSize: 11, color: "$faint", wrap: false, align: [center, middle], text: 协作编排}
+  - elementId: tag5
+    elementType: text
+    bounds: [826, 2714, 190, 18]
+    content: {fontSize: 11, color: "$faint", wrap: false, align: [center, middle], text: 系统治理}
+  - elementId: footer
+    elementType: text
+    bounds: [64, 2736, 952, 20]
+    content:
+      fontSize: 13
+      color: "$faint"
+      wrap: false
+      align: [center, middle]
+      text: AI 时代个人五能力模型 · 定稿版 2026 ｜ 口号出自模型文档"传播口号" ｜ 欢迎使用、检验与推翻
+  - elementId: watermark
+    elementType: text
+    bounds: [856, 2738, 200, 16]
+    content:
+      fontSize: 12
+      color: "$faint"
+      wrap: false
+      align: [right, middle]
+      letterSpacing: 2
+      text: IvanXue

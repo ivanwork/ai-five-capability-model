@@ -1,0 +1,42 @@
+version: v2
+title: AI 时代个人五能力模型 · 信息图
+size: [1080, 2760]
+customFonts:
+  - family: 汇文明朝体
+    src: "https://statics.kimi.ai/neo-design-static/p-font/汇文明朝体.ttf"
+  - family: 更纱黑体
+    src: "https://statics.kimi.ai/neo-design-static/p-font/更纱黑体.ttf"
+theme:
+  colors:
+    paper: "#F3EDE0"
+    panel: "#FBF8EF"
+    panel2: "#EFE7D6"
+    ink: "#231F18"
+    sub: "#4A443A"
+    dim: "#7D7462"
+    faint: "#A79B85"
+    line: "#D8CFBB"
+    accent: "#B4442C"
+    meta: "#6A5799"
+    logic: "#2F6B8A"
+    comm: "#49785A"
+    collab: "#B27A2A"
+    gov: "#9E4A44"
+  textStyles:
+    sec:
+      fontSize: 16
+      fontFamily: 汇文明朝体
+      color: "$accent"
+      letterSpacing: 2
+    body:
+      fontSize: 17
+      fontFamily: 更纱黑体
+      color: "$sub"
+      lineHeight: 1.6
+    caps:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      color: "$ink"
+      lineHeight: 1.5
+pages:
+  - pages/1_main.page
