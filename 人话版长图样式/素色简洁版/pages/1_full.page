@@ -1,0 +1,1368 @@
+pageType: content
+background:
+  type: solid
+  color: "#FAF8F4"
+elements:
+  # ================= 页眉 =================
+  - elementId: hd-rule
+    elementType: shape
+    bounds: [84, 64, 912, 2]
+    shapeName: rect
+    fill: {type: solid, color: "#23262B"}
+  - elementId: hd-label
+    elementType: text
+    bounds: [84, 84, 500, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      color: "#6B6F76"
+      letterSpacing: 3
+      wrap: false
+      text: AI 时代 · 个人五能力模型
+  - elementId: hd-title
+    elementType: text
+    bounds: [84, 122, 912, 62]
+    content:
+      fontSize: 46
+      fontFamily: 思源宋体
+      bold: true
+      color: "#23262B"
+      wrap: false
+      text: AI 时代个人五能力模型
+  - elementId: hd-sub1
+    elementType: text
+    bounds: [84, 200, 912, 24]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      color: "#4A4E55"
+      wrap: false
+      text: 通俗版 · 保留五项能力主干，用日常例子讲怎么用
+  - elementId: hd-sub2
+    elementType: text
+    bounds: [84, 230, 912, 20]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      color: "#8A8E96"
+      wrap: false
+      text: 需要严格区分能力归属、或想看完整定义和判别规则时，再查原版
+  - elementId: hd-accent
+    elementType: shape
+    bounds: [84, 272, 48, 5]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  # ================= 大实话 =================
+  - elementId: intro-sq
+    elementType: shape
+    bounds: [84, 340, 10, 10]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: intro-label
+    elementType: text
+    bounds: [106, 334, 400, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      letterSpacing: 2
+      wrap: false
+      text: 先说一个大实话
+  - elementId: intro-big
+    elementType: text
+    bounds: [84, 376, 912, 52]
+    content:
+      fontSize: 34
+      fontFamily: 思源宋体
+      bold: true
+      color: "#23262B"
+      wrap: false
+      text: AI 是放大器
+  - elementId: intro-bigsub
+    elementType: text
+    bounds: [84, 440, 912, 28]
+    content:
+      fontSize: 18
+      fontFamily: 思源宋体
+      color: "#23262B"
+      wrap: false
+      text: 它放大你的能力，也放大你的缺失。
+  - elementId: intro-body
+    elementType: text
+    bounds: [84, 486, 912, 56]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      color: "#4A4E55"
+      lineHeight: 1.9
+      text: |
+        想得清楚，AI 往往能帮你提速；想不清楚，它也可能放大你的疏漏。结果要由你核对，后果仍由你负责。
+  - elementId: intro-tblhint
+    elementType: text
+    bounds: [84, 562, 912, 24]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      color: "#6B6F76"
+      wrap: false
+      text: 下面这些翻车现场，大概率你也遇到过：
+  # ---- 表格头 ----
+  - elementId: tbl-h1
+    elementType: text
+    bounds: [84, 612, 500, 22]
+    content:
+      fontSize: 12
+      fontFamily: 更纱黑体
+      color: "#8A8E96"
+      letterSpacing: 2
+      wrap: false
+      text: 翻车现场
+  - elementId: tbl-h2
+    elementType: text
+    bounds: [620, 612, 376, 22]
+    content:
+      fontSize: 12
+      fontFamily: 更纱黑体
+      color: "#8A8E96"
+      letterSpacing: 2
+      wrap: false
+      text: 真正缺的是什么
+  - elementId: tbl-rule-h
+    elementType: shape
+    bounds: [84, 644, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#C9C4B8"}
+  # ---- 行 1 ----
+  - elementId: tbl-r1c1
+    elementType: text
+    bounds: [84, 662, 500, 50]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.75
+      text: |
+        不问任务需要，把整个 PDF/Excel 直接丢给 AI，白白增加输入量和使用成本
+  - elementId: tbl-r1c2
+    elementType: text
+    bounds: [620, 662, 376, 50]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.75
+      text: |
+        没先想清楚：这活儿该怎么拆、该喂给 AI 什么
+  - elementId: tbl-rule-1
+    elementType: shape
+    bounds: [84, 726, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#E4E0D5"}
+  # ---- 行 2 ----
+  - elementId: tbl-r2c1
+    elementType: text
+    bounds: [84, 744, 500, 50]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.75
+      text: |
+        跟 AI 说「修一下这个问题」，不给背景也不给要求
+  - elementId: tbl-r2c2
+    elementType: text
+    bounds: [620, 744, 376, 50]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.75
+      text: |
+        没把意图和约束说出口（要是自己都没想明白要什么，那是上一条）
+  - elementId: tbl-rule-2
+    elementType: shape
+    bounds: [84, 808, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#E4E0D5"}
+  # ---- 行 3 ----
+  - elementId: tbl-r3c1
+    elementType: text
+    bounds: [84, 826, 500, 50]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.75
+      text: |
+        把 AI 做的网页开放给别人用，却不知道怎么检查风险、出错后怎么撤回
+  - elementId: tbl-r3c2
+    elementType: text
+    bounds: [620, 826, 376, 50]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.75
+      text: |
+        没守住自己的能力边界，也没有个人使用规矩
+  - elementId: tbl-rule-3
+    elementType: shape
+    bounds: [84, 890, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#E4E0D5"}
+  # ---- 行 4 ----
+  - elementId: tbl-r4c1
+    elementType: text
+    bounds: [84, 908, 500, 28]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.75
+      wrap: false
+      text: AI 答得流畅，你就信了
+  - elementId: tbl-r4c2
+    elementType: text
+    bounds: [620, 908, 376, 28]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.75
+      wrap: false
+      text: 把「说得好听」当成了「说得对」，没有验证
+  - elementId: tbl-rule-4
+    elementType: shape
+    bounds: [84, 950, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#E4E0D5"}
+  # ---- 行 5 ----
+  - elementId: tbl-r5c1
+    elementType: text
+    bounds: [84, 968, 500, 28]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.75
+      wrap: false
+      text: 事事问 AI，自己原来的手艺越来越生
+  - elementId: tbl-r5c2
+    elementType: text
+    bounds: [620, 968, 376, 28]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.75
+      wrap: false
+      text: 依赖没了分寸：哪些该自己干的，也交出去了
+  - elementId: tbl-rule-5
+    elementType: shape
+    bounds: [84, 1010, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#C9C4B8"}
+  - elementId: intro-close
+    elementType: text
+    bounds: [84, 1040, 912, 26]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      color: "#4A4E55"
+      wrap: false
+      text: 这五种能力既帮你避开这些坑，也帮你更好地学习、判断、创作和与人合作。
+  # ================= 模块 ① 元认知 =================
+  - elementId: m1-rule
+    elementType: shape
+    bounds: [84, 1130, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#C9C4B8"}
+  - elementId: m1-num
+    elementType: text
+    bounds: [84, 1162, 110, 60]
+    content:
+      fontSize: 46
+      fontFamily: 思源宋体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: "01"
+  - elementId: m1-name
+    elementType: text
+    bounds: [196, 1166, 400, 38]
+    content:
+      fontSize: 26
+      fontFamily: 思源宋体
+      bold: true
+      color: "#23262B"
+      wrap: false
+      text: 元认知
+  - elementId: m1-kicker
+    elementType: text
+    bounds: [196, 1208, 500, 18]
+    content:
+      fontSize: 11
+      fontFamily: 更纱黑体
+      color: "#8A8E96"
+      letterSpacing: 2
+      wrap: false
+      text: METACOGNITION · 看清自己、AI 和任务的边界
+  - elementId: m1-l1-label
+    elementType: text
+    bounds: [84, 1262, 200, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 一句话
+  - elementId: m1-l1
+    elementType: text
+    bounds: [84, 1290, 912, 82]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.9
+      text: |
+        随时搞清楚三件事——我知道什么、AI 可能错在哪、这件事风险多大。也留意自己是不是被情绪、偏好或对 AI 的依赖带着走。然后按这些判断决定怎么做。
+  - elementId: m1-l2-label
+    elementType: text
+    bounds: [84, 1392, 200, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 自检三句
+  - elementId: m1-l2
+    elementType: text
+    bounds: [84, 1420, 912, 82]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.9
+      text: |
+        开口找 AI 之前，先对自己说清——我要什么、用来干什么、什么样算好。说不清？那就承认「我还没想清楚」，这不算丢人，跳过这一步才危险。
+  - elementId: m1-l3-label
+    elementType: text
+    bounds: [84, 1522, 200, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 常见的坑
+  - elementId: m1-b1-sq
+    elementType: shape
+    bounds: [86, 1562, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m1-b1
+    elementType: text
+    bounds: [110, 1554, 886, 56]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      text: |
+        AI 答得顺，你就信了——无论觉得自己有几成把握，都问一句：支撑这个判断的证据够不够？重要结论要核对。
+  - elementId: m1-b2-sq
+    elementType: shape
+    bounds: [86, 1628, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m1-b2
+    elementType: text
+    bounds: [110, 1620, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 点了「确认」却说不清自己核了什么——把关的感觉有了，把关的动作没有。
+  - elementId: m1-b3-sq
+    elementType: shape
+    bounds: [86, 1676, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m1-b3
+    elementType: text
+    bounds: [110, 1668, 886, 82]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      text: |
+        哪天意识到「我最近好像什么都交给 AI 了」——这个瞬间很宝贵，记下来。顺手记下哪件事交给了哪个 AI、哪些判断仍由你做、最近实际分工有没有变。靠脑子是记不住的，用复盘表或清单。
+  - elementId: m1-quote-bar
+    elementType: shape
+    bounds: [84, 1772, 3, 56]
+    shapeName: rect
+    fill: {type: solid, color: "#B9C3D4"}
+  - elementId: m1-quote
+    elementType: text
+    bounds: [104, 1772, 892, 60]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      color: "#6B6F76"
+      lineHeight: 1.85
+      text: |
+        它帮你持续察觉自己、AI 和任务哪里需要重新判断；具体的判断、沟通、分工和立规矩，还得分别去做。涉及隐私、权限等高风险的事，规矩要走在前面（见第 ⑤ 项）。
+  # ================= 模块 ② 逻辑判断 =================
+  - elementId: m2-rule
+    elementType: shape
+    bounds: [84, 1894, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#C9C4B8"}
+  - elementId: m2-num
+    elementType: text
+    bounds: [84, 1926, 110, 60]
+    content:
+      fontSize: 46
+      fontFamily: 思源宋体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: "02"
+  - elementId: m2-name
+    elementType: text
+    bounds: [196, 1930, 400, 38]
+    content:
+      fontSize: 26
+      fontFamily: 思源宋体
+      bold: true
+      color: "#23262B"
+      wrap: false
+      text: 逻辑判断
+  - elementId: m2-kicker
+    elementType: text
+    bounds: [196, 1972, 500, 18]
+    content:
+      fontSize: 11
+      fontFamily: 更纱黑体
+      color: "#8A8E96"
+      letterSpacing: 2
+      wrap: false
+      text: LOGIC · 看清问题、证据和取舍
+  - elementId: m2-l1-label
+    elementType: text
+    bounds: [84, 2026, 200, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 一句话
+  - elementId: m2-l1
+    elementType: text
+    bounds: [84, 2054, 912, 56]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.9
+      text: |
+        把一团模糊的事变成能分析、能验证的问题，然后用证据和逻辑得出结论，也敢推翻自己的结论。
+  - elementId: m2-l2-label
+    elementType: text
+    bounds: [84, 2130, 200, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 平时长这样
+  - elementId: m2-b1-sq
+    elementType: shape
+    bounds: [86, 2170, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m2-b1
+    elementType: text
+    bounds: [110, 2162, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 先把问题本身问对——很多时候答案错了，是因为题目就错了。
+  - elementId: m2-b2-sq
+    elementType: shape
+    bounds: [86, 2210, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m2-b2
+    elementType: text
+    bounds: [110, 2202, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 分清「事实、推测、观点、立场」四样东西，AI 的回答里它们经常混在一起。
+  - elementId: m2-b3-sq
+    elementType: shape
+    bounds: [86, 2250, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m2-b3
+    elementType: text
+    bounds: [110, 2242, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 主动找反例：「这个结论在什么情况下不成立？」
+  - elementId: m2-b4-sq
+    elementType: shape
+    bounds: [86, 2290, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m2-b4
+    elementType: text
+    bounds: [110, 2282, 886, 56]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      text: |
+        方案不止一个时，摆开来比一比——比如省时间和保隐私都重要，别假装两者没有冲突，明说这个冲突再选。
+  - elementId: m2-b5-sq
+    elementType: shape
+    bounds: [86, 2356, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m2-b5
+    elementType: text
+    bounds: [110, 2348, 886, 82]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      text: |
+        AI 给了断言，让它给证据；它列出的来源也要自己核对，尤其是会影响你决定的说法。让 AI 摘要或转述时，也要对照原文看有没有漏掉关键内容。
+  - elementId: m2-b6-sq
+    elementType: shape
+    bounds: [86, 2448, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m2-b6
+    elementType: text
+    bounds: [110, 2440, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 交出去之前，先定好「怎样算过关」，而不是看到结果再说「还行」。
+  # ================= 模块 ③ 沟通表达 =================
+  - elementId: m3-rule
+    elementType: shape
+    bounds: [84, 2530, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#C9C4B8"}
+  - elementId: m3-num
+    elementType: text
+    bounds: [84, 2562, 110, 60]
+    content:
+      fontSize: 46
+      fontFamily: 思源宋体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: "03"
+  - elementId: m3-name
+    elementType: text
+    bounds: [196, 2566, 400, 38]
+    content:
+      fontSize: 26
+      fontFamily: 思源宋体
+      bold: true
+      color: "#23262B"
+      wrap: false
+      text: 沟通表达
+  - elementId: m3-kicker
+    elementType: text
+    bounds: [196, 2608, 600, 18]
+    content:
+      fontSize: 11
+      fontFamily: 更纱黑体
+      color: "#8A8E96"
+      letterSpacing: 2
+      wrap: false
+      text: COMMUNICATION · 把话说明白，也确认对方理解成了什么
+  - elementId: m3-l1-label
+    elementType: text
+    bounds: [84, 2662, 200, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 一句话
+  - elementId: m3-l1
+    elementType: text
+    bounds: [84, 2690, 912, 56]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.9
+      text: |
+        让对方真正听懂你的意图、背景和约束，也让你真正听懂对方的。对人、对 AI，说明方式可能不同。
+  - elementId: m3-l2-label
+    elementType: text
+    bounds: [84, 2766, 200, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 平时长这样
+  - elementId: m3-b1-sq
+    elementType: shape
+    bounds: [86, 2806, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m3-b1
+    elementType: text
+    bounds: [110, 2798, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 词穷的时候别硬憋，举例子、找参照物、画个草图都行。
+  - elementId: m3-b2-sq
+    elementType: shape
+    bounds: [86, 2846, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m3-b2
+    elementType: text
+    bounds: [110, 2838, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 把「我不太确定」和「我很有把握」分开说——不确定不是弱点，瞒着才是。
+  - elementId: m3-b3-sq
+    elementType: shape
+    bounds: [86, 2886, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m3-b3
+    elementType: text
+    bounds: [110, 2878, 886, 108]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      text: |
+        AI 的回复跑偏了，别急着骂它笨：把它给的回答当成一面镜子，想想「我刚才那句话会被理解成这样，那我该换个什么说法」，然后改。如果要求已经说清楚了仍然跑偏，那就检查资料、工具或 AI 本身的能力，别只反复改说法。
+  - elementId: m3-b4-sq
+    elementType: shape
+    bounds: [86, 3004, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m3-b4
+    elementType: text
+    bounds: [110, 2996, 886, 56]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      text: |
+        把模糊的要求变成能执行的话：「写得好一点」→「八百字以内，给完全没接触过的人看，举三个例子」。
+  # ================= 模块 ④ 协作编排 =================
+  - elementId: m4-rule
+    elementType: shape
+    bounds: [84, 3112, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#C9C4B8"}
+  - elementId: m4-num
+    elementType: text
+    bounds: [84, 3144, 110, 60]
+    content:
+      fontSize: 46
+      fontFamily: 思源宋体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: "04"
+  - elementId: m4-name
+    elementType: text
+    bounds: [196, 3148, 400, 38]
+    content:
+      fontSize: 26
+      fontFamily: 思源宋体
+      bold: true
+      color: "#23262B"
+      wrap: false
+      text: 协作编排
+  - elementId: m4-kicker
+    elementType: text
+    bounds: [196, 3190, 600, 18]
+    content:
+      fontSize: 11
+      fontFamily: 更纱黑体
+      color: "#8A8E96"
+      letterSpacing: 2
+      wrap: false
+      text: ORCHESTRATION · 安排谁干什么
+  - elementId: m4-l1-label
+    elementType: text
+    bounds: [84, 3244, 200, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 一句话
+  - elementId: m4-l1
+    elementType: text
+    bounds: [84, 3272, 912, 30]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.9
+      wrap: false
+      text: 让人、AI、工具不是各干各的，而是拼成一台能干成事的机器。
+  - elementId: m4-note-bar
+    elementType: shape
+    bounds: [84, 3324, 3, 30]
+    shapeName: rect
+    fill: {type: solid, color: "#B9C3D4"}
+  - elementId: m4-note
+    elementType: text
+    bounds: [104, 3324, 892, 30]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      color: "#6B6F76"
+      lineHeight: 1.85
+      wrap: false
+      text: 这一项分两半，擅长一半不代表擅长另一半，评估自己时也分开看，别揉成一个分数。
+  - elementId: m4-l2-label
+    elementType: text
+    bounds: [84, 3380, 300, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 管任务的那半
+  - elementId: m4-b1-sq
+    elementType: shape
+    bounds: [86, 3420, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m4-b1
+    elementType: text
+    bounds: [110, 3412, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 拆任务、定分工——并且明说这项任务中哪些判断必须由人做、为什么。
+  - elementId: m4-b2-sq
+    elementType: shape
+    bounds: [86, 3460, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m4-b2
+    elementType: text
+    bounds: [110, 3452, 886, 56]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      text: |
+        交给 AI 的东西收回来时，要求它说明做了什么、依据在哪里、哪里没把握；接手之后，关键依据要自己核查——AI 写下依据不等于依据可靠。
+  - elementId: m4-b3-sq
+    elementType: shape
+    bounds: [86, 3526, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m4-b3
+    elementType: text
+    bounds: [110, 3518, 886, 56]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      text: |
+        定期看看实际分工有没有变：AI 是否开始替你做原本打算由你做的判断？它的能力变了，原来的安排是否还合适？这两种变化都要看。
+  - elementId: m4-b4-sq
+    elementType: shape
+    bounds: [86, 3592, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m4-b4
+    elementType: text
+    bounds: [110, 3584, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 复盘时如果结论全是「AI 的锅」、没有一条指向自己的动作，这是推卸责任的信号。
+  - elementId: m4-l3-label
+    elementType: text
+    bounds: [84, 3644, 300, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 与人合作的那半
+  - elementId: m4-b5-sq
+    elementType: shape
+    bounds: [86, 3684, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m4-b5
+    elementType: text
+    bounds: [110, 3676, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 先对齐共同目标，再搞懂各方的利益和难处。
+  - elementId: m4-b6-sq
+    elementType: shape
+    bounds: [86, 3724, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m4-b6
+    elementType: text
+    bounds: [110, 3716, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 信任和心理安全感要养：别人敢不敢跟你说真话，决定了你能拿到多少真信息。
+  - elementId: m4-b7-sq
+    elementType: shape
+    bounds: [86, 3764, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m4-b7
+    elementType: text
+    bounds: [110, 3756, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 有分歧要谈出处理办法；出了事一起查清事实和分工，各自承担该承担的责任。
+  - elementId: m4-b8-sq
+    elementType: shape
+    bounds: [86, 3804, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m4-b8
+    elementType: text
+    bounds: [110, 3796, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 这里说的信任指人与人。对 AI 放不放心，要分别看两件事：它是否可靠，以及你给了它多大权限。
+  # ================= 模块 ⑤ 系统治理 =================
+  - elementId: m5-rule
+    elementType: shape
+    bounds: [84, 3886, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#C9C4B8"}
+  - elementId: m5-num
+    elementType: text
+    bounds: [84, 3918, 110, 60]
+    content:
+      fontSize: 46
+      fontFamily: 思源宋体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: "05"
+  - elementId: m5-name
+    elementType: text
+    bounds: [196, 3922, 400, 38]
+    content:
+      fontSize: 26
+      fontFamily: 思源宋体
+      bold: true
+      color: "#23262B"
+      wrap: false
+      text: 系统治理
+  - elementId: m5-kicker
+    elementType: text
+    bounds: [196, 3964, 600, 18]
+    content:
+      fontSize: 11
+      fontFamily: 更纱黑体
+      color: "#8A8E96"
+      letterSpacing: 2
+      wrap: false
+      text: GOVERNANCE · 给自己立规矩
+  - elementId: m5-l1-label
+    elementType: text
+    bounds: [84, 4018, 200, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 一句话
+  - elementId: m5-l1
+    elementType: text
+    bounds: [84, 4046, 912, 56]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.9
+      text: |
+        给「你 + AI + 工具」这套组合立几条自己的规矩，让它长期跑得稳、出了事找得到原因、错了能退回来。
+  - elementId: m5-l2-label
+    elementType: text
+    bounds: [84, 4122, 200, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      wrap: false
+      text: 平时长这样
+  - elementId: m5-b1-sq
+    elementType: shape
+    bounds: [86, 4162, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m5-b1
+    elementType: text
+    bounds: [110, 4154, 886, 56]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      text: |
+        想清楚哪些资料不能输入给 AI、哪些要先处理或征得同意；哪些结果必须由人复核。写下来，而不是只在心里记着。
+  - elementId: m5-b2-sq
+    elementType: shape
+    bounds: [86, 4228, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m5-b2
+    elementType: text
+    bounds: [110, 4220, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 有自己的固定做法：比如「AI 写的东西，发出前必须过一遍来源」。
+  - elementId: m5-b3-sq
+    elementType: shape
+    bounds: [86, 4268, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m5-b3
+    elementType: text
+    bounds: [110, 4260, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 出错了有退路：能撤回或恢复到上一版，知道该找谁。
+  - elementId: m5-b4-sq
+    elementType: shape
+    bounds: [86, 4308, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m5-b4
+    elementType: text
+    bounds: [110, 4300, 886, 30]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      wrap: false
+      text: 定期给规矩体检：哪些还在执行、哪些空转、哪些该废了。
+  - elementId: m5-b5-sq
+    elementType: shape
+    bounds: [86, 4348, 8, 8]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: m5-b5
+    elementType: text
+    bounds: [110, 4340, 886, 56]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#383C43"
+      lineHeight: 1.85
+      text: |
+        反过来说：低危、低频、自己兜得住的事，不立规矩不算缺点——事事立规矩反而增加负担。
+  - elementId: m5-quote-bar
+    elementType: shape
+    bounds: [84, 4418, 3, 28]
+    shapeName: rect
+    fill: {type: solid, color: "#B9C3D4"}
+  - elementId: m5-quote
+    elementType: text
+    bounds: [104, 4418, 892, 30]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      color: "#6B6F76"
+      lineHeight: 1.85
+      wrap: false
+      text: 即使不负责制定公司制度，你也能管好自己使用 AI 的流程。
+  # ================= 一张图看懂 =================
+  - elementId: dg-rule
+    elementType: shape
+    bounds: [84, 4510, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#C9C4B8"}
+  - elementId: dg-sq
+    elementType: shape
+    bounds: [84, 4548, 10, 10]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: dg-label
+    elementType: text
+    bounds: [106, 4542, 400, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      letterSpacing: 2
+      wrap: false
+      text: 一张图看懂
+  - elementId: dg-premise
+    elementType: text
+    bounds: [84, 4584, 912, 26]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#23262B"
+      align: [center, top]
+      wrap: false
+      text: 前提：AI 是放大器——放大能力，也放大缺失
+  # ---- 框 1 元认知 ----
+  - elementId: dg-box1
+    elementType: shape
+    bounds: [240, 4636, 600, 64]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill: {type: solid, color: "#FFFFFF"}
+    border: {color: "#52678C", width: 1.5}
+  - elementId: dg-box1-t
+    elementType: text
+    bounds: [240, 4636, 600, 64]
+    content:
+      fontSize: 16
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#23262B"
+      align: [center, middle]
+      wrap: false
+      text: 元认知（持续检查自己、AI 和任务）
+  - elementId: dg-ar1
+    elementType: text
+    bounds: [510, 4708, 60, 34]
+    content:
+      fontSize: 20
+      fontFamily: 更纱黑体
+      color: "#52678C"
+      align: [center, top]
+      wrap: false
+      text: ↓
+  # ---- 框 2 三大件 ----
+  - elementId: dg-box2
+    elementType: shape
+    bounds: [240, 4750, 600, 64]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill: {type: solid, color: "#FFFFFF"}
+    border: {color: "#23262B", width: 1.5}
+  - elementId: dg-box2-t
+    elementType: text
+    bounds: [240, 4750, 600, 64]
+    content:
+      fontSize: 16
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#23262B"
+      align: [center, middle]
+      wrap: false
+      text: 逻辑判断 · 沟通表达 · 协作编排（日常干活的三大件）
+  - elementId: dg-ar2
+    elementType: text
+    bounds: [510, 4822, 60, 34]
+    content:
+      fontSize: 20
+      fontFamily: 更纱黑体
+      color: "#52678C"
+      align: [center, top]
+      wrap: false
+      text: ↑
+  - elementId: dg-ar2-note
+    elementType: text
+    bounds: [590, 4828, 300, 22]
+    content:
+      fontSize: 12
+      fontFamily: 更纱黑体
+      color: "#8A8E96"
+      wrap: false
+      text: 持续约束
+  # ---- 框 3 系统治理 ----
+  - elementId: dg-box3
+    elementType: shape
+    bounds: [240, 4864, 600, 64]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill: {type: solid, color: "#FFFFFF"}
+    border: {color: "#52678C", width: 1.5}
+  - elementId: dg-box3-t
+    elementType: text
+    bounds: [240, 4864, 600, 64]
+    content:
+      fontSize: 16
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#23262B"
+      align: [center, middle]
+      wrap: false
+      text: 系统治理（规矩）
+  - elementId: dg-loop
+    elementType: text
+    bounds: [84, 4948, 912, 24]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      color: "#6B6F76"
+      align: [center, top]
+      wrap: false
+      text: 干完的结果回流，元认知和规矩据此更新
+  # ---- 框 4 底层 ----
+  - elementId: dg-box4
+    elementType: shape
+    bounds: [240, 4996, 600, 56]
+    shapeName: rect
+    fill: {type: solid, color: "#EFF1F4"}
+  - elementId: dg-box4-t
+    elementType: text
+    bounds: [240, 4996, 600, 56]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#4A4E55"
+      align: [center, middle]
+      wrap: false
+      text: 底层托着：你的专业知识 · 手艺 · 工具 · 经验
+  # ================= 一句话记住它 =================
+  - elementId: mm-rule
+    elementType: shape
+    bounds: [84, 5122, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#C9C4B8"}
+  - elementId: mm-label
+    elementType: text
+    bounds: [84, 5152, 912, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      color: "#8A8E96"
+      letterSpacing: 2
+      align: [center, top]
+      wrap: false
+      text: 一句话记住它
+  - elementId: mm-main
+    elementType: text
+    bounds: [84, 5192, 912, 40]
+    content:
+      fontSize: 24
+      fontFamily: 思源宋体
+      bold: true
+      color: "#23262B"
+      align: [center, top]
+      wrap: false
+      text: 看见放大 · 校准判断 · 对齐理解 · 组织行动 · 约束后果
+  # ================= 附录 =================
+  - elementId: ax-rule
+    elementType: shape
+    bounds: [84, 5302, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#C9C4B8"}
+  - elementId: ax-sq
+    elementType: shape
+    bounds: [84, 5340, 10, 10]
+    shapeName: rect
+    fill: {type: solid, color: "#52678C"}
+  - elementId: ax-label
+    elementType: text
+    bounds: [106, 5334, 500, 22]
+    content:
+      fontSize: 13
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#52678C"
+      letterSpacing: 2
+      wrap: false
+      text: 附录 · 分不清一件事归哪项能力时
+  - elementId: ax-intro
+    elementType: text
+    bounds: [84, 5378, 912, 56]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#4A4E55"
+      lineHeight: 1.85
+      text: |
+        几种常见的混淆分别看；一件事也可能涉及几项能力，需要分析时，先说清主要在做什么，再补充其他关联。拿不准主要归属时，查原版。
+  - elementId: ax-q1
+    elementType: text
+    bounds: [84, 5456, 912, 26]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#23262B"
+      wrap: false
+      text: 1 · 这是在「盯着状态」还是在「分析内容」？
+  - elementId: ax-a1
+    elementType: text
+    bounds: [108, 5488, 888, 26]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#4A4E55"
+      lineHeight: 1.8
+      wrap: false
+      text: 「我此刻靠不靠谱」→ 元认知；「这东西对不对」→ 逻辑判断。
+  - elementId: ax-q2
+    elementType: text
+    bounds: [84, 5538, 912, 26]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#23262B"
+      wrap: false
+      text: 2 · 这是在「形成理解」还是在「形成行动」？
+  - elementId: ax-a2
+    elementType: text
+    bounds: [108, 5570, 888, 26]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#4A4E55"
+      lineHeight: 1.8
+      wrap: false
+      text: 说明白了 → 沟通表达；安排起来了 → 协作编排。
+  - elementId: ax-q3
+    elementType: text
+    bounds: [84, 5620, 912, 26]
+    content:
+      fontSize: 15
+      fontFamily: 更纱黑体
+      bold: true
+      color: "#23262B"
+      wrap: false
+      text: 3 · 在判断这一次的内容，还是在建立一套会触发检查、约束行动的办法？
+  - elementId: ax-a3
+    elementType: text
+    bounds: [108, 5652, 888, 82]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#4A4E55"
+      lineHeight: 1.8
+      text: |
+        判断这次结论是否可靠，主要是逻辑判断；定下谁在什么情况下检查、怎样处理风险，是系统治理。注意：不能只看做一次还是做很多次——一次性的任务也可能需要立规矩，天天做的分析也可能只是判断。
+  - elementId: ax-close
+    elementType: text
+    bounds: [84, 5756, 912, 26]
+    content:
+      fontSize: 14
+      fontFamily: 更纱黑体
+      color: "#6B6F76"
+      wrap: false
+      text: 遇到更复杂的混淆，去查原版的「边界判别」一节，那里有完整规则。
+  # ================= 页脚 =================
+  - elementId: ft-rule
+    elementType: shape
+    bounds: [84, 5840, 912, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#C9C4B8"}
+  - elementId: ft-version
+    elementType: text
+    bounds: [84, 5870, 700, 22]
+    content:
+      fontSize: 12
+      fontFamily: 更纱黑体
+      color: "#8A8E96"
+      wrap: false
+      text: 人话版 V1.0 · 基于 2026-09-28 定稿版框架改写 · 经双 AI 交叉评审修订
+  - elementId: ft-mark
+    elementType: text
+    bounds: [784, 5866, 212, 26]
+    content:
+      fontSize: 15
+      fontFamily: Liter
+      color: "#6B6F76"
+      align: [right, top]
+      wrap: false
+      text: by Ivan Xue
