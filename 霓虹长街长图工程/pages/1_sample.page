@@ -1,0 +1,332 @@
+pageType: cover
+background:
+  type: solid
+  color: "$ink"
+elements:
+  # ---------- 底图与氛围 ----------
+  - elementId: bg-street
+    elementType: image
+    bounds: [0, 0, 1080, 1920]
+    src: media/street.jpg
+    fit: {mode: cover}
+  - elementId: bg-shade
+    elementType: shape
+    bounds: [0, 0, 1080, 1920]
+    shapeName: rect
+    fill:
+      type: gradient
+      gradientType: linear
+      angle: 90
+      stops:
+        - {position: 0, color: "#05080FCC"}
+        - {position: 0.28, color: "#05080F40"}
+        - {position: 0.62, color: "#05080F59"}
+        - {position: 1, color: "#05080FD9"}
+
+  # ---------- 门头：标题区 ----------
+  - elementId: kicker
+    elementType: text
+    bounds: [64, 72, 800, 28]
+    content:
+      fontSize: 17
+      color: "$cyan"
+      letterSpacing: 6
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: AI 时代 · 个人五能力模型
+  - elementId: main-title
+    elementType: text
+    bounds: [60, 108, 960, 100]
+    content:
+      fontSize: 66
+      fontFamily: 站酷文艺体
+      color: "#FFF6E8"
+      wrap: false
+      align: [left, middle]
+      shadow: {blur: 26, color: "#FF3E9ACC", offset: [0, 0]}
+      text: AI 时代个人五能力模型
+  - elementId: title-tag
+    elementType: shape
+    bounds: [66, 226, 138, 50]
+    shapeName: roundRect
+    adjustments: [12000]
+    rotation: -3
+    fill: {type: solid, color: "#FF3E9A1F"}
+    border: {style: solid, width: 1.5, color: "$magenta"}
+    shadow: {blur: 18, color: "#FF3E9A80", offset: [0, 0]}
+  - elementId: title-tag-text
+    elementType: text
+    bounds: [66, 226, 138, 50]
+    rotation: -3
+    content:
+      fontSize: 24
+      fontFamily: 站酷文艺体
+      color: "#FF8FC2"
+      align: [center, middle]
+      wrap: false
+      shadow: {blur: 10, color: "#FF3E9A", offset: [0, 0]}
+      text: 人话版
+  - elementId: title-sub
+    elementType: text
+    bounds: [64, 302, 952, 30]
+    content:
+      fontSize: 18
+      color: "$dim"
+      letterSpacing: 3
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: 元认知 · 逻辑判断 · 沟通表达 · 协作编排 · 系统治理
+  - elementId: title-divider
+    elementType: shape
+    bounds: [64, 352, 952, 2]
+    shapeName: rect
+    fill:
+      type: gradient
+      gradientType: linear
+      angle: 0
+      stops:
+        - {position: 0, color: "#29E6FF"}
+        - {position: 0.5, color: "#FF3E9A"}
+        - {position: 1, color: "#FF3E9A00"}
+
+  # ---------- 招牌 ① 元认知（青色灯管） ----------
+  - elementId: board1
+    elementType: shape
+    bounds: [64, 420, 952, 620]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill: {type: solid, color: "#0A1120E0"}
+    border: {style: solid, width: 1.5, color: "#29E6FF"}
+    shadow: {blur: 28, color: "#29E6FF4D", offset: [0, 0]}
+  - elementId: board1-ghost
+    elementType: text
+    bounds: [660, 446, 320, 190]
+    content:
+      fontSize: 150
+      bold: true
+      fontFamily: 更纱黑体
+      color: "#29E6FF24"
+      align: [right, top]
+      wrap: false
+      text: "01"
+  - elementId: board1-icon
+    elementType: icon
+    bounds: [96, 458, 38, 38]
+    iconName: "fas:brain"
+    fill: {type: solid, color: "$cyan"}
+    shadow: {blur: 14, color: "#29E6FF", offset: [0, 0]}
+  - elementId: board1-tag
+    elementType: text
+    bounds: [152, 458, 520, 38]
+    content:
+      fontSize: 17
+      color: "$cyan"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 能力 ① · METACOGNITION
+  - elementId: board1-name
+    elementType: text
+    bounds: [92, 512, 620, 86]
+    content:
+      fontSize: 58
+      fontFamily: 站酷文艺体
+      color: "#D8FAFF"
+      align: [left, middle]
+      wrap: false
+      shadow: {blur: 20, color: "#29E6FF", offset: [0, 0]}
+      text: 元认知
+  - elementId: board1-subtitle
+    elementType: text
+    bounds: [96, 608, 880, 36]
+    content:
+      fontSize: 24
+      color: "$paper"
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 看清自己、AI 和任务的边界
+  - elementId: board1-hairline
+    elementType: shape
+    bounds: [96, 666, 856, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#29E6FF38"}
+  - elementId: board1-label1
+    elementType: text
+    bounds: [96, 694, 300, 28]
+    content:
+      fontSize: 16
+      color: "#FF8FC2"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍一句话
+  - elementId: board1-body1
+    elementType: text
+    bounds: [96, 730, 856, 76]
+    content:
+      fontSize: 19
+      color: "#D8DCE6"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        随时搞清楚三件事——我知道什么、AI 可能错在哪、这件事风险多大；也留意自己是不是被情绪、偏好或对 AI 的依赖带着走，然后按这些判断决定怎么做。
+  - elementId: board1-label2
+    elementType: text
+    bounds: [96, 830, 300, 28]
+    content:
+      fontSize: 16
+      color: "#FF8FC2"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍自检三句
+  - elementId: board1-body2
+    elementType: text
+    bounds: [96, 866, 856, 108]
+    content:
+      fontSize: 19
+      color: "#D8DCE6"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        开口找 AI 之前，先对自己说清——我要什么、用来干什么、什么样算好。说不清，就承认「我还没想清楚」：这不算丢人，跳过这一步才危险。
+
+  # ---------- 招牌 ② 逻辑判断（品红灯管，错位叠挂） ----------
+  - elementId: board2
+    elementType: shape
+    bounds: [96, 1088, 952, 560]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill: {type: solid, color: "#0A1120E0"}
+    border: {style: solid, width: 1.5, color: "#FF3E9A"}
+    shadow: {blur: 28, color: "#FF3E9A4D", offset: [0, 0]}
+  - elementId: board2-ghost
+    elementType: text
+    bounds: [692, 1112, 320, 190]
+    content:
+      fontSize: 150
+      bold: true
+      fontFamily: 更纱黑体
+      color: "#FF3E9A24"
+      align: [right, top]
+      wrap: false
+      text: "02"
+  - elementId: board2-icon
+    elementType: icon
+    bounds: [128, 1124, 38, 38]
+    iconName: "fas:scale-balanced"
+    fill: {type: solid, color: "$magenta"}
+    shadow: {blur: 14, color: "#FF3E9A", offset: [0, 0]}
+  - elementId: board2-tag
+    elementType: text
+    bounds: [184, 1124, 520, 38]
+    content:
+      fontSize: 17
+      color: "#FF8FC2"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 能力 ② · LOGIC
+  - elementId: board2-name
+    elementType: text
+    bounds: [124, 1178, 620, 86]
+    content:
+      fontSize: 58
+      fontFamily: 站酷文艺体
+      color: "#FFD8EC"
+      align: [left, middle]
+      wrap: false
+      shadow: {blur: 20, color: "#FF3E9A", offset: [0, 0]}
+      text: 逻辑判断
+  - elementId: board2-subtitle
+    elementType: text
+    bounds: [128, 1274, 880, 36]
+    content:
+      fontSize: 24
+      color: "$paper"
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 看清问题、证据和取舍
+  - elementId: board2-hairline
+    elementType: shape
+    bounds: [128, 1332, 856, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#FF3E9A38"}
+  - elementId: board2-label1
+    elementType: text
+    bounds: [128, 1360, 300, 28]
+    content:
+      fontSize: 16
+      color: "#7EEFFF"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍一句话
+  - elementId: board2-body1
+    elementType: text
+    bounds: [128, 1396, 856, 76]
+    content:
+      fontSize: 19
+      color: "#D8DCE6"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        把一团模糊的事变成能分析、能验证的问题，然后用证据和逻辑得出结论，也敢推翻自己的结论。
+  - elementId: board2-label2
+    elementType: text
+    bounds: [128, 1496, 300, 28]
+    content:
+      fontSize: 16
+      color: "#7EEFFF"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍平时长这样
+  - elementId: board2-body2
+    elementType: text
+    bounds: [128, 1532, 856, 76]
+    content:
+      fontSize: 19
+      color: "#D8DCE6"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        先把问题本身问对——很多时候答案错了，是因为题目就错了；分清「事实、推测、观点、立场」，AI 的回答里它们经常混在一起。
+
+  # ---------- 街尾：导引 ----------
+  - elementId: footer-more
+    elementType: text
+    bounds: [64, 1700, 952, 30]
+    content:
+      fontSize: 17
+      color: "$dim"
+      letterSpacing: 3
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: ③ 沟通表达 · ④ 协作编排 · ⑤ 系统治理　——　长街往下，招牌继续
+  - elementId: footer-meta
+    elementType: text
+    bounds: [64, 1742, 952, 24]
+    content:
+      fontSize: 14
+      color: "#6B7484"
+      letterSpacing: 2
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: 样稿 A · 霓虹长街方向 · 仅示风格

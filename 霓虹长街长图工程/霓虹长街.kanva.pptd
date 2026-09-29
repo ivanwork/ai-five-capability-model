@@ -1,0 +1,26 @@
+version: v2
+title: 人话版长图样稿A·霓虹长街
+size: [1080, 7280]
+customFonts:
+  - family: 站酷文艺体
+    src: "https://statics.kimi.ai/neo-design-static/p-font/站酷文艺体.ttf"
+  - family: 更纱黑体
+    src: "https://statics.kimi.ai/neo-design-static/p-font/更纱黑体.ttf"
+  - family: Liter
+    src: "https://statics.kimi.ai/neo-design-static/p-font/Liter.ttf"
+theme:
+  colors:
+    ink: "#070B14"
+    cyan: "#29E6FF"
+    magenta: "#FF3E9A"
+    amber: "#FFB347"
+    green: "#4DFFA6"
+    violet: "#B78CFF"
+    red: "#FF5A5A"
+    slate: "#8FA3C8"
+    paper: "#F5F1E8"
+    dim: "#9AA3B5"
+    body: "#D8DCE6"
+pages:
+  - pages/1_sample.page
+  - pages/2_full.page

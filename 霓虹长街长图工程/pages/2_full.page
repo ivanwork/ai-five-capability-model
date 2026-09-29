@@ -1,0 +1,1165 @@
+pageType: content
+background:
+  type: solid
+  color: "$ink"
+elements:
+  # ---------- 街景底图：四段镜像拼接 ----------
+  - elementId: bg-1
+    elementType: image
+    bounds: [0, 0, 1080, 1920]
+    src: media/street.jpg
+    fit: {mode: cover}
+  - elementId: bg-2
+    elementType: image
+    bounds: [0, 1920, 1080, 1920]
+    src: media/street.jpg
+    fit: {mode: cover}
+    flip: [false, true]
+  - elementId: bg-3
+    elementType: image
+    bounds: [0, 3840, 1080, 1920]
+    src: media/street.jpg
+    fit: {mode: cover}
+  - elementId: bg-4
+    elementType: image
+    bounds: [0, 5760, 1080, 1520]
+    src: media/street.jpg
+    fit: {mode: cover}
+    flip: [false, true]
+  - elementId: bg-shade
+    elementType: shape
+    bounds: [0, 0, 1080, 7280]
+    shapeName: rect
+    fill:
+      type: gradient
+      gradientType: linear
+      angle: 90
+      stops:
+        - {position: 0, color: "#05080FCC"}
+        - {position: 0.12, color: "#05080F40"}
+        - {position: 0.5, color: "#05080F59"}
+        - {position: 1, color: "#05080FD9"}
+
+  # ---------- 门头 ----------
+  - elementId: kicker
+    elementType: text
+    bounds: [64, 64, 800, 28]
+    content:
+      fontSize: 17
+      color: "$cyan"
+      letterSpacing: 6
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: AI 时代 · 个人五能力模型
+  - elementId: main-title
+    elementType: text
+    bounds: [60, 100, 960, 96]
+    content:
+      fontSize: 66
+      fontFamily: 站酷文艺体
+      color: "#FFF6E8"
+      wrap: false
+      align: [left, middle]
+      shadow: {blur: 26, color: "#FF3E9ACC", offset: [0, 0]}
+      text: AI 时代个人五能力模型
+  - elementId: title-sub
+    elementType: text
+    bounds: [64, 216, 952, 30]
+    content:
+      fontSize: 18
+      color: "$dim"
+      letterSpacing: 3
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: 元认知 · 逻辑判断 · 沟通表达 · 协作编排 · 系统治理
+  - elementId: title-meta
+    elementType: text
+    bounds: [64, 254, 952, 24]
+    content:
+      fontSize: 14
+      color: "#6B7484"
+      letterSpacing: 2
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: 《AI时代个人五能力模型》通俗版 · 严格定义与判别规则请查原版
+  - elementId: title-divider
+    elementType: shape
+    bounds: [64, 302, 952, 2]
+    shapeName: rect
+    fill:
+      type: gradient
+      gradientType: linear
+      angle: 0
+      stops:
+        - {position: 0, color: "#29E6FF"}
+        - {position: 0.5, color: "#FF3E9A"}
+        - {position: 1, color: "#FF3E9A00"}
+
+  # ---------- 开场：大实话 ----------
+  - elementId: intro-label
+    elementType: text
+    bounds: [64, 380, 400, 28]
+    content:
+      fontSize: 16
+      color: "#FF8A8A"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍先说一个大实话
+  - elementId: intro-statement
+    elementType: text
+    bounds: [64, 424, 952, 120]
+    content:
+      fontFamily: 站酷文艺体
+      color: "#FFF6E8"
+      align: [left, top]
+      shadow: {blur: 22, color: "#FFB34799", offset: [0, 0]}
+      text: |
+        <p><span style="font-size:40px">AI 是放大器</span></p>
+        <p style="margin-top:14px"><span style="font-size:24px">它放大你的能力，也放大你的缺失。</span></p>
+  - elementId: intro-support
+    elementType: text
+    bounds: [64, 560, 952, 76]
+    content:
+      fontSize: 20
+      color: "#C9CFDA"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        想得清楚，AI 往往能帮你提速；想不清楚，它也可能放大你的疏漏。结果要由你核对，后果仍由你负责。
+  - elementId: intro-leadin
+    elementType: text
+    bounds: [64, 652, 952, 32]
+    content:
+      fontSize: 20
+      color: "$paper"
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: 下面这些翻车现场，大概率你也遇到过——
+  - elementId: intro-board
+    elementType: shape
+    bounds: [96, 700, 952, 496]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill: {type: solid, color: "#0A1120E0"}
+    border: {style: solid, width: 1.5, color: "$red"}
+    shadow: {blur: 28, color: "#FF5A5A4D", offset: [0, 0]}
+  - elementId: intro-table
+    elementType: table
+    bounds: [128, 732, 888, 432]
+    columnWidths: [0.47, 0.53]
+    rowHeights: [0.13, 0.174, 0.174, 0.174, 0.174, 0.174]
+    style:
+      cellStyle:
+        fontSize: 17
+        color: "$body"
+        lineHeight: 1.6
+        fontFamily: 更纱黑体
+        align: [left, middle]
+        border: [null, null, {style: solid, width: 1, color: "#FF5A5A2E"}, null]
+      firstRowStyle:
+        color: "#FF8A8A"
+        bold: true
+        fontSize: 18
+        fill: {type: solid, color: "#FF5A5A14"}
+        border: [null, null, {style: solid, width: 1.5, color: "#FF5A5A66"}, null]
+    rows:
+      - - text: 翻车现场
+        - text: 真正缺的是什么
+      - - text: 不问任务需要，把整个 PDF/Excel 直接丢给 AI，白白增加输入量和使用成本
+        - text: 没先想清楚：这活儿该怎么拆、该喂给 AI 什么
+      - - text: 跟 AI 说「修一下这个问题」，不给背景也不给要求
+        - text: 没把意图和约束说出口（要是自己都没想明白要什么，那是上一条）
+      - - text: 把 AI 做的网页开放给别人用，却不知道怎么检查风险、出错后怎么撤回
+        - text: 没守住自己的能力边界，也没有个人使用规矩
+      - - text: AI 答得流畅，你就信了
+        - text: 把「说得好听」当成了「说得对」，没有验证
+      - - text: 事事问 AI，自己原来的手艺越来越生
+        - text: 依赖没了分寸：哪些该自己干的，也交出去了
+  - elementId: intro-closing
+    elementType: text
+    bounds: [64, 1240, 952, 36]
+    content:
+      fontSize: 20
+      color: "$paper"
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: 这五种能力既帮你避开这些坑，也帮你更好地学习、判断、创作和与人合作。
+
+  # ---------- 招牌 ① 元认知（青） ----------
+  - elementId: b1
+    elementType: shape
+    bounds: [64, 1360, 952, 920]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill: {type: solid, color: "#0A1120E0"}
+    border: {style: solid, width: 1.5, color: "$cyan"}
+    shadow: {blur: 28, color: "#29E6FF4D", offset: [0, 0]}
+  - elementId: b1-ghost
+    elementType: text
+    bounds: [660, 1386, 320, 190]
+    content:
+      fontSize: 150
+      bold: true
+      fontFamily: 更纱黑体
+      color: "#29E6FF24"
+      align: [right, top]
+      wrap: false
+      text: "01"
+  - elementId: b1-icon
+    elementType: icon
+    bounds: [96, 1398, 38, 38]
+    iconName: "fas:brain"
+    fill: {type: solid, color: "$cyan"}
+  - elementId: b1-tag
+    elementType: text
+    bounds: [152, 1398, 560, 38]
+    content:
+      fontSize: 17
+      color: "$cyan"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 能力 ① · METACOGNITION
+  - elementId: b1-name
+    elementType: text
+    bounds: [92, 1452, 620, 86]
+    content:
+      fontSize: 58
+      fontFamily: 站酷文艺体
+      color: "#D8FAFF"
+      align: [left, middle]
+      wrap: false
+      shadow: {blur: 20, color: "#29E6FF", offset: [0, 0]}
+      text: 元认知
+  - elementId: b1-subtitle
+    elementType: text
+    bounds: [96, 1548, 888, 36]
+    content:
+      fontSize: 24
+      color: "$paper"
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 看清自己、AI 和任务的边界
+  - elementId: b1-hairline
+    elementType: shape
+    bounds: [96, 1606, 888, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#29E6FF38"}
+  - elementId: b1-label1
+    elementType: text
+    bounds: [96, 1632, 300, 28]
+    content:
+      fontSize: 16
+      color: "#FF8FC2"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍一句话
+  - elementId: b1-body1
+    elementType: text
+    bounds: [96, 1668, 888, 72]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        随时搞清楚三件事——我知道什么、AI 可能错在哪、这件事风险多大；也留意自己是不是被情绪、偏好或对 AI 的依赖带着走，然后按这些判断决定怎么做。
+  - elementId: b1-label2
+    elementType: text
+    bounds: [96, 1764, 300, 28]
+    content:
+      fontSize: 16
+      color: "#FF8FC2"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍自检三句
+  - elementId: b1-body2
+    elementType: text
+    bounds: [96, 1800, 888, 72]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        开口找 AI 之前，先对自己说清——我要什么、用来干什么、什么样算好。说不清，就承认「我还没想清楚」：这不算丢人，跳过这一步才危险。
+  - elementId: b1-label3
+    elementType: text
+    bounds: [96, 1896, 300, 28]
+    content:
+      fontSize: 16
+      color: "#FF8FC2"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍常见的坑
+  - elementId: b1-bullets
+    elementType: text
+    bounds: [96, 1932, 888, 212]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        <p><span style="color:#29E6FF">·</span> AI 答得顺，你就信了——无论觉得自己有几成把握，都问一句：支撑这个判断的证据够不够？重要结论要核对。</p>
+        <p style="margin-top:10px"><span style="color:#29E6FF">·</span> 点了「确认」却说不清自己核了什么——把关的感觉有了，把关的动作没有。</p>
+        <p style="margin-top:10px"><span style="color:#29E6FF">·</span> 哪天意识到「我最近好像什么都交给 AI 了」——这个瞬间很宝贵，记下来。顺手记下哪件事交给了哪个 AI、哪些判断仍由你做、最近实际分工有没有变。靠脑子是记不住的，用复盘表或清单。</p>
+  - elementId: b1-quotebar
+    elementType: shape
+    bounds: [96, 2176, 3, 60]
+    shapeName: rect
+    fill: {type: solid, color: "#29E6FF66"}
+  - elementId: b1-quote
+    elementType: text
+    bounds: [116, 2172, 868, 64]
+    content:
+      fontSize: 17
+      color: "$dim"
+      lineHeight: 1.6
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        它帮你持续察觉自己、AI 和任务哪里需要重新判断；具体的判断、沟通、分工和立规矩，还得分别去做。涉及隐私、权限等高风险的事，规矩要走在前面（见第⑤项）。
+
+  # ---------- 招牌 ② 逻辑判断（品红） ----------
+  - elementId: b2
+    elementType: shape
+    bounds: [96, 2328, 952, 824]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill: {type: solid, color: "#0A1120E0"}
+    border: {style: solid, width: 1.5, color: "$magenta"}
+    shadow: {blur: 28, color: "#FF3E9A4D", offset: [0, 0]}
+  - elementId: b2-ghost
+    elementType: text
+    bounds: [692, 2354, 320, 190]
+    content:
+      fontSize: 150
+      bold: true
+      fontFamily: 更纱黑体
+      color: "#FF3E9A24"
+      align: [right, top]
+      wrap: false
+      text: "02"
+  - elementId: b2-icon
+    elementType: icon
+    bounds: [128, 2366, 38, 38]
+    iconName: "fas:scale-balanced"
+    fill: {type: solid, color: "$magenta"}
+  - elementId: b2-tag
+    elementType: text
+    bounds: [184, 2366, 560, 38]
+    content:
+      fontSize: 17
+      color: "#FF8FC2"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 能力 ② · LOGIC
+  - elementId: b2-name
+    elementType: text
+    bounds: [124, 2420, 620, 86]
+    content:
+      fontSize: 58
+      fontFamily: 站酷文艺体
+      color: "#FFD8EC"
+      align: [left, middle]
+      wrap: false
+      shadow: {blur: 20, color: "#FF3E9A", offset: [0, 0]}
+      text: 逻辑判断
+  - elementId: b2-subtitle
+    elementType: text
+    bounds: [128, 2516, 888, 36]
+    content:
+      fontSize: 24
+      color: "$paper"
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 看清问题、证据和取舍
+  - elementId: b2-hairline
+    elementType: shape
+    bounds: [128, 2574, 888, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#FF3E9A38"}
+  - elementId: b2-label1
+    elementType: text
+    bounds: [128, 2600, 300, 28]
+    content:
+      fontSize: 16
+      color: "#7EEFFF"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍一句话
+  - elementId: b2-body1
+    elementType: text
+    bounds: [128, 2636, 888, 72]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        把一团模糊的事变成能分析、能验证的问题，然后用证据和逻辑得出结论，也敢推翻自己的结论。
+  - elementId: b2-label2
+    elementType: text
+    bounds: [128, 2732, 300, 28]
+    content:
+      fontSize: 16
+      color: "#7EEFFF"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍平时长这样
+  - elementId: b2-bullets
+    elementType: text
+    bounds: [128, 2768, 888, 306]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        <p><span style="color:#FF3E9A">·</span> 先把问题本身问对——很多时候答案错了，是因为题目就错了。</p>
+        <p style="margin-top:10px"><span style="color:#FF3E9A">·</span> 分清「事实、推测、观点、立场」四样东西，AI 的回答里它们经常混在一起。</p>
+        <p style="margin-top:10px"><span style="color:#FF3E9A">·</span> 主动找反例：「这个结论在什么情况下不成立？」</p>
+        <p style="margin-top:10px"><span style="color:#FF3E9A">·</span> 方案不止一个时，摆开来比一比——比如省时间和保隐私都重要，别假装两者没有冲突，明说这个冲突再选。</p>
+        <p style="margin-top:10px"><span style="color:#FF3E9A">·</span> AI 给了断言，让它给证据；它列出的来源也要自己核对，尤其是会影响你决定的说法。让 AI 摘要或转述时，也要对照原文看有没有漏掉关键内容。</p>
+        <p style="margin-top:10px"><span style="color:#FF3E9A">·</span> 交出去之前，先定好「怎样算过关」，而不是看到结果再说「还行」。</p>
+
+  # ---------- 招牌 ③ 沟通表达（琥珀） ----------
+  - elementId: b3
+    elementType: shape
+    bounds: [64, 3200, 952, 742]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill: {type: solid, color: "#0A1120E0"}
+    border: {style: solid, width: 1.5, color: "$amber"}
+    shadow: {blur: 28, color: "#FFB3474D", offset: [0, 0]}
+  - elementId: b3-ghost
+    elementType: text
+    bounds: [660, 3226, 320, 190]
+    content:
+      fontSize: 150
+      bold: true
+      fontFamily: 更纱黑体
+      color: "#FFB34724"
+      align: [right, top]
+      wrap: false
+      text: "03"
+  - elementId: b3-icon
+    elementType: icon
+    bounds: [96, 3238, 38, 38]
+    iconName: "fas:comments"
+    fill: {type: solid, color: "$amber"}
+  - elementId: b3-tag
+    elementType: text
+    bounds: [152, 3238, 560, 38]
+    content:
+      fontSize: 17
+      color: "$amber"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 能力 ③ · COMMUNICATION
+  - elementId: b3-name
+    elementType: text
+    bounds: [92, 3292, 620, 86]
+    content:
+      fontSize: 58
+      fontFamily: 站酷文艺体
+      color: "#FFEBD2"
+      align: [left, middle]
+      wrap: false
+      shadow: {blur: 20, color: "#FFB347", offset: [0, 0]}
+      text: 沟通表达
+  - elementId: b3-subtitle
+    elementType: text
+    bounds: [96, 3388, 888, 36]
+    content:
+      fontSize: 24
+      color: "$paper"
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 把话说明白，也确认对方理解成了什么
+  - elementId: b3-hairline
+    elementType: shape
+    bounds: [96, 3446, 888, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#FFB34738"}
+  - elementId: b3-label1
+    elementType: text
+    bounds: [96, 3472, 300, 28]
+    content:
+      fontSize: 16
+      color: "#DCC8FF"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍一句话
+  - elementId: b3-body1
+    elementType: text
+    bounds: [96, 3508, 888, 72]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        让对方真正听懂你的意图、背景和约束，也让你真正听懂对方的。对人、对 AI，说明方式可能不同。
+  - elementId: b3-label2
+    elementType: text
+    bounds: [96, 3604, 300, 28]
+    content:
+      fontSize: 16
+      color: "#DCC8FF"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍平时长这样
+  - elementId: b3-bullets
+    elementType: text
+    bounds: [96, 3640, 888, 254]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        <p><span style="color:#FFB347">·</span> 词穷的时候别硬憋，举例子、找参照物、画个草图都行。</p>
+        <p style="margin-top:10px"><span style="color:#FFB347">·</span> 把「我不太确定」和「我很有把握」分开说——不确定不是弱点，瞒着才是。</p>
+        <p style="margin-top:10px"><span style="color:#FFB347">·</span> AI 的回复跑偏了，别急着骂它笨：把它给的回答当成一面镜子，想想「我刚才那句话会被理解成这样，那我该换个什么说法」，然后改。如果要求已经说清楚了仍然跑偏，那就检查资料、工具或 AI 本身的能力，别只反复改说法。</p>
+        <p style="margin-top:10px"><span style="color:#FFB347">·</span> 把模糊的要求变成能执行的话：「写得好一点」→「八百字以内，给完全没接触过的人看，举三个例子」。</p>
+
+  # ---------- 招牌 ④ 协作编排（绿） ----------
+  - elementId: b4
+    elementType: shape
+    bounds: [96, 3990, 952, 996]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill: {type: solid, color: "#0A1120E0"}
+    border: {style: solid, width: 1.5, color: "$green"}
+    shadow: {blur: 28, color: "#4DFFA64D", offset: [0, 0]}
+  - elementId: b4-ghost
+    elementType: text
+    bounds: [692, 4016, 320, 190]
+    content:
+      fontSize: 150
+      bold: true
+      fontFamily: 更纱黑体
+      color: "#4DFFA624"
+      align: [right, top]
+      wrap: false
+      text: "04"
+  - elementId: b4-icon
+    elementType: icon
+    bounds: [128, 4028, 38, 38]
+    iconName: "fas:people-arrows"
+    fill: {type: solid, color: "$green"}
+  - elementId: b4-tag
+    elementType: text
+    bounds: [184, 4028, 560, 38]
+    content:
+      fontSize: 17
+      color: "$green"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 能力 ④ · ORCHESTRATION
+  - elementId: b4-name
+    elementType: text
+    bounds: [124, 4082, 620, 86]
+    content:
+      fontSize: 58
+      fontFamily: 站酷文艺体
+      color: "#DBFFEC"
+      align: [left, middle]
+      wrap: false
+      shadow: {blur: 20, color: "#4DFFA6", offset: [0, 0]}
+      text: 协作编排
+  - elementId: b4-subtitle
+    elementType: text
+    bounds: [128, 4178, 888, 36]
+    content:
+      fontSize: 24
+      color: "$paper"
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 安排谁干什么
+  - elementId: b4-hairline
+    elementType: shape
+    bounds: [128, 4236, 888, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#4DFFA638"}
+  - elementId: b4-label1
+    elementType: text
+    bounds: [128, 4262, 300, 28]
+    content:
+      fontSize: 16
+      color: "#FFD9A0"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍一句话
+  - elementId: b4-body1
+    elementType: text
+    bounds: [128, 4298, 888, 40]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        让人、AI、工具不是各干各的，而是拼成一台能干成事的机器。
+  - elementId: b4-notebar
+    elementType: shape
+    bounds: [128, 4366, 3, 32]
+    shapeName: rect
+    fill: {type: solid, color: "#4DFFA666"}
+  - elementId: b4-note
+    elementType: text
+    bounds: [148, 4362, 868, 36]
+    content:
+      fontSize: 17
+      color: "#C9CFDA"
+      lineHeight: 1.6
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        这一项分两半，<strong>擅长一半不代表擅长另一半</strong>，评估自己时也分开看，别揉成一个分数。
+  - elementId: b4-labelA
+    elementType: text
+    bounds: [128, 4418, 400, 28]
+    content:
+      fontSize: 16
+      color: "#FFD9A0"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍管任务的那半
+  - elementId: b4-bulletsA
+    elementType: text
+    bounds: [128, 4454, 888, 222]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        <p><span style="color:#4DFFA6">·</span> 拆任务、定分工——并且明说这项任务中哪些判断必须由人做、为什么。</p>
+        <p style="margin-top:10px"><span style="color:#4DFFA6">·</span> 交给 AI 的东西收回来时，要求它说明做了什么、依据在哪里、哪里没把握；接手之后，关键依据要自己核查——AI 写下依据不等于依据可靠。</p>
+        <p style="margin-top:10px"><span style="color:#4DFFA6">·</span> 定期看看实际分工有没有变：AI 是否开始替你做原本打算由你做的判断？它的能力变了，原来的安排是否还合适？这两种变化都要看。</p>
+        <p style="margin-top:10px"><span style="color:#4DFFA6">·</span> 复盘时如果结论全是「AI 的锅」、没有一条指向自己的动作，这是推卸责任的信号。</p>
+  - elementId: b4-labelB
+    elementType: text
+    bounds: [128, 4716, 400, 28]
+    content:
+      fontSize: 16
+      color: "#FFD9A0"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍与人合作的那半
+  - elementId: b4-bulletsB
+    elementType: text
+    bounds: [128, 4752, 888, 190]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        <p><span style="color:#4DFFA6">·</span> 先对齐共同目标，再搞懂各方的利益和难处。</p>
+        <p style="margin-top:10px"><span style="color:#4DFFA6">·</span> 信任和心理安全感要养：别人敢不敢跟你说真话，决定了你能拿到多少真信息。</p>
+        <p style="margin-top:10px"><span style="color:#4DFFA6">·</span> 有分歧要谈出处理办法；出了事一起查清事实和分工，各自承担该承担的责任。</p>
+        <p style="margin-top:10px"><span style="color:#4DFFA6">·</span> 这里说的信任指人与人。对 AI 放不放心，要分别看两件事：它是否可靠，以及你给了它多大权限。</p>
+
+  # ---------- 招牌 ⑤ 系统治理（紫） ----------
+  - elementId: b5
+    elementType: shape
+    bounds: [64, 5022, 952, 812]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill: {type: solid, color: "#0A1120E0"}
+    border: {style: solid, width: 1.5, color: "$violet"}
+    shadow: {blur: 28, color: "#B78CFF4D", offset: [0, 0]}
+  - elementId: b5-ghost
+    elementType: text
+    bounds: [660, 5048, 320, 190]
+    content:
+      fontSize: 150
+      bold: true
+      fontFamily: 更纱黑体
+      color: "#B78CFF24"
+      align: [right, top]
+      wrap: false
+      text: "05"
+  - elementId: b5-icon
+    elementType: icon
+    bounds: [96, 5060, 38, 38]
+    iconName: "fas:shield-halved"
+    fill: {type: solid, color: "$violet"}
+  - elementId: b5-tag
+    elementType: text
+    bounds: [152, 5060, 560, 38]
+    content:
+      fontSize: 17
+      color: "$violet"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 能力 ⑤ · GOVERNANCE
+  - elementId: b5-name
+    elementType: text
+    bounds: [92, 5114, 620, 86]
+    content:
+      fontSize: 58
+      fontFamily: 站酷文艺体
+      color: "#EFE6FF"
+      align: [left, middle]
+      wrap: false
+      shadow: {blur: 20, color: "#B78CFF", offset: [0, 0]}
+      text: 系统治理
+  - elementId: b5-subtitle
+    elementType: text
+    bounds: [96, 5210, 888, 36]
+    content:
+      fontSize: 24
+      color: "$paper"
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 给自己立规矩
+  - elementId: b5-hairline
+    elementType: shape
+    bounds: [96, 5268, 888, 1]
+    shapeName: rect
+    fill: {type: solid, color: "#B78CFF38"}
+  - elementId: b5-label1
+    elementType: text
+    bounds: [96, 5294, 300, 28]
+    content:
+      fontSize: 16
+      color: "#7EEFFF"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍一句话
+  - elementId: b5-body1
+    elementType: text
+    bounds: [96, 5330, 888, 72]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        给「你 + AI + 工具」这套组合立几条自己的规矩，让它长期跑得稳、出了事找得到原因、错了能退回来。
+  - elementId: b5-label2
+    elementType: text
+    bounds: [96, 5426, 300, 28]
+    content:
+      fontSize: 16
+      color: "#7EEFFF"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: ▍平时长这样
+  - elementId: b5-bullets
+    elementType: text
+    bounds: [96, 5462, 888, 264]
+    content:
+      fontSize: 19
+      color: "$body"
+      lineHeight: 1.7
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        <p><span style="color:#B78CFF">·</span> 想清楚哪些资料不能输入给 AI、哪些要先处理或征得同意；哪些结果必须由人复核。写下来，而不是只在心里记着。</p>
+        <p style="margin-top:10px"><span style="color:#B78CFF">·</span> 有自己的固定做法：比如「AI 写的东西，发出前必须过一遍来源」。</p>
+        <p style="margin-top:10px"><span style="color:#B78CFF">·</span> 出错了有退路：能撤回或恢复到上一版，知道该找谁。</p>
+        <p style="margin-top:10px"><span style="color:#B78CFF">·</span> 定期给规矩体检：哪些还在执行、哪些空转、哪些该废了。</p>
+        <p style="margin-top:10px"><span style="color:#B78CFF">·</span> <strong>反过来说</strong>：低危、低频、自己兜得住的事，不立规矩不算缺点——事事立规矩反而增加负担。</p>
+  - elementId: b5-quotebar
+    elementType: shape
+    bounds: [96, 5758, 3, 30]
+    shapeName: rect
+    fill: {type: solid, color: "#B78CFF66"}
+  - elementId: b5-quote
+    elementType: text
+    bounds: [116, 5754, 868, 34]
+    content:
+      fontSize: 17
+      color: "$dim"
+      lineHeight: 1.6
+      fontFamily: 更纱黑体
+      align: [left, top]
+      wrap: false
+      text: 即使不负责制定公司制度，你也能管好自己使用 AI 的流程。
+
+  # ---------- 一张图看懂 ----------
+  - elementId: map
+    elementType: shape
+    bounds: [64, 5882, 952, 570]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill: {type: solid, color: "#0A1120E0"}
+    border: {style: solid, width: 1.5, color: "#F5F1E8"}
+    shadow: {blur: 28, color: "#F5F1E833", offset: [0, 0]}
+  - elementId: map-icon
+    elementType: icon
+    bounds: [96, 5914, 32, 32]
+    iconName: "fas:map-signs"
+    fill: {type: solid, color: "$paper"}
+  - elementId: map-tag
+    elementType: text
+    bounds: [144, 5914, 640, 32]
+    content:
+      fontSize: 17
+      color: "$paper"
+      letterSpacing: 4
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 一张图看懂 · THE BIG PICTURE
+  - elementId: map-premise
+    elementType: text
+    bounds: [96, 5964, 888, 28]
+    content:
+      fontSize: 16
+      color: "$dim"
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: 前提：AI 是放大器——放大能力，也放大缺失
+  - elementId: map-boxA
+    elementType: shape
+    bounds: [340, 6006, 400, 60]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill: {type: solid, color: "#29E6FF14"}
+    border: {style: solid, width: 1.5, color: "$cyan"}
+    shadow: {blur: 16, color: "#29E6FF66", offset: [0, 0]}
+  - elementId: map-boxA-text
+    elementType: text
+    bounds: [340, 6006, 400, 60]
+    content:
+      fontSize: 20
+      color: "#D8FAFF"
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: 元认知（持续检查自己、AI 和任务）
+  - elementId: map-arrowA
+    elementType: line
+    bounds: [530, 6070, 20, 36]
+    viewBox: [20, 36]
+    points: "10,0 10,36"
+    arrow: [null, arrow]
+    border: {style: solid, width: 2, color: "$cyan"}
+  - elementId: map-mini1
+    elementType: shape
+    bounds: [96, 6118, 272, 56]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill: {type: solid, color: "#FF3E9A14"}
+    border: {style: solid, width: 1.5, color: "$magenta"}
+    shadow: {blur: 14, color: "#FF3E9A59", offset: [0, 0]}
+  - elementId: map-mini1-text
+    elementType: text
+    bounds: [96, 6118, 272, 56]
+    content:
+      fontSize: 20
+      color: "#FFD8EC"
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: 逻辑判断
+  - elementId: map-mini2
+    elementType: shape
+    bounds: [404, 6118, 272, 56]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill: {type: solid, color: "#FFB34714"}
+    border: {style: solid, width: 1.5, color: "$amber"}
+    shadow: {blur: 14, color: "#FFB34759", offset: [0, 0]}
+  - elementId: map-mini2-text
+    elementType: text
+    bounds: [404, 6118, 272, 56]
+    content:
+      fontSize: 20
+      color: "#FFEBD2"
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: 沟通表达
+  - elementId: map-mini3
+    elementType: shape
+    bounds: [712, 6118, 272, 56]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill: {type: solid, color: "#4DFFA614"}
+    border: {style: solid, width: 1.5, color: "$green"}
+    shadow: {blur: 14, color: "#4DFFA659", offset: [0, 0]}
+  - elementId: map-mini3-text
+    elementType: text
+    bounds: [712, 6118, 272, 56]
+    content:
+      fontSize: 20
+      color: "#DBFFEC"
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: 协作编排
+  - elementId: map-minis-caption
+    elementType: text
+    bounds: [96, 6182, 888, 22]
+    content:
+      fontSize: 14
+      color: "$dim"
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: 日常干活的三大件
+  - elementId: map-arrowB
+    elementType: line
+    bounds: [530, 6212, 20, 36]
+    viewBox: [20, 36]
+    points: "10,36 10,0"
+    arrow: [arrow, null]
+    border: {style: solid, width: 2, color: "$violet"}
+  - elementId: map-barB
+    elementType: shape
+    bounds: [240, 6252, 600, 56]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill: {type: solid, color: "#B78CFF14"}
+    border: {style: solid, width: 1.5, color: "$violet"}
+    shadow: {blur: 16, color: "#B78CFF66", offset: [0, 0]}
+  - elementId: map-barB-text
+    elementType: text
+    bounds: [240, 6252, 600, 56]
+    content:
+      fontSize: 20
+      color: "#EFE6FF"
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: 系统治理 · 规矩——持续约束三大件
+  - elementId: map-loop
+    elementType: text
+    bounds: [96, 6324, 888, 24]
+    content:
+      fontSize: 14
+      color: "$dim"
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: 干完的结果回流，元认知和规矩据此更新
+  - elementId: map-base
+    elementType: shape
+    bounds: [96, 6360, 888, 52]
+    shapeName: rect
+    fill: {type: solid, color: "#070B14"}
+    border: {style: solid, width: 1, color: "#3A4356"}
+  - elementId: map-base-text
+    elementType: text
+    bounds: [96, 6360, 888, 52]
+    content:
+      fontSize: 16
+      color: "$dim"
+      letterSpacing: 2
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: 底层托着 · 你的专业知识 / 手艺 / 工具 / 经验
+  - elementId: map-slogan
+    elementType: text
+    bounds: [64, 6492, 952, 44]
+    content:
+      fontSize: 24
+      fontFamily: 站酷文艺体
+      color: "#FFF6E8"
+      align: [center, middle]
+      wrap: false
+      shadow: {blur: 18, color: "#29E6FF99", offset: [0, 0]}
+      text: |
+        <p><span style="font-size:15px; color:$dim">一句话记住它　</span>看见放大 · 校准判断 · 对齐理解 · 组织行动 · 约束后果</p>
+
+  # ---------- 附录：边界判别速查（灰蓝） ----------
+  - elementId: apx
+    elementType: shape
+    bounds: [96, 6580, 952, 510]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill: {type: solid, color: "#0A1120E0"}
+    border: {style: solid, width: 1.5, color: "$slate"}
+    shadow: {blur: 24, color: "#8FA3C840", offset: [0, 0]}
+  - elementId: apx-icon
+    elementType: icon
+    bounds: [128, 6612, 32, 32]
+    iconName: "fas:circle-question"
+    fill: {type: solid, color: "$slate"}
+  - elementId: apx-tag
+    elementType: text
+    bounds: [176, 6612, 640, 32]
+    content:
+      fontSize: 17
+      color: "#C3D0E8"
+      letterSpacing: 3
+      fontFamily: 更纱黑体
+      align: [left, middle]
+      wrap: false
+      text: 附录 · 分不清一件事归哪项能力时
+  - elementId: apx-intro
+    elementType: text
+    bounds: [128, 6660, 888, 60]
+    content:
+      fontSize: 17
+      color: "#C9CFDA"
+      lineHeight: 1.6
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        几种常见的混淆分别看；一件事也可能涉及几项能力，需要分析时，先说清主要在做什么，再补充其他关联。拿不准主要归属时，查原版。
+  - elementId: apx-q1
+    elementType: text
+    bounds: [128, 6732, 888, 30]
+    content:
+      fontSize: 19
+      color: "$paper"
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: |
+        <p><span style="color:#8FA3C8">1 · </span>这是在「盯着状态」还是在「分析内容」？</p>
+  - elementId: apx-a1
+    elementType: text
+    bounds: [128, 6766, 888, 30]
+    content:
+      fontSize: 17
+      color: "$dim"
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: 「我此刻靠不靠谱」→ 元认知；「这东西对不对」→ 逻辑判断。
+  - elementId: apx-q2
+    elementType: text
+    bounds: [128, 6808, 888, 30]
+    content:
+      fontSize: 19
+      color: "$paper"
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: |
+        <p><span style="color:#8FA3C8">2 · </span>这是在「形成理解」还是在「形成行动」？</p>
+  - elementId: apx-a2
+    elementType: text
+    bounds: [128, 6842, 888, 30]
+    content:
+      fontSize: 17
+      color: "$dim"
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: 说明白了 → 沟通表达；安排起来了 → 协作编排。
+  - elementId: apx-q3
+    elementType: text
+    bounds: [128, 6884, 888, 30]
+    content:
+      fontSize: 19
+      color: "$paper"
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: |
+        <p><span style="color:#8FA3C8">3 · </span>在判断这一次的内容，还是在建立一套会触发检查、约束行动的办法？</p>
+  - elementId: apx-a3
+    elementType: text
+    bounds: [128, 6918, 888, 84]
+    content:
+      fontSize: 17
+      color: "$dim"
+      lineHeight: 1.6
+      fontFamily: 更纱黑体
+      align: [left, top]
+      text: |
+        判断这次结论是否可靠，主要是逻辑判断；定下谁在什么情况下检查、怎样处理风险，是系统治理。注意：不能只看做一次还是做很多次——一次性的任务也可能需要立规矩，天天做的分析也可能只是判断。
+  - elementId: apx-closing
+    elementType: text
+    bounds: [128, 7014, 888, 30]
+    content:
+      fontSize: 17
+      color: "$dim"
+      fontFamily: 更纱黑体
+      wrap: false
+      align: [left, middle]
+      text: 遇到更复杂的混淆，去查原版的「边界判别」一节，那里有完整规则。
+
+  # ---------- 街尾 ----------
+  - elementId: footer-version
+    elementType: text
+    bounds: [64, 7144, 952, 26]
+    content:
+      fontSize: 14
+      color: "#6B7484"
+      letterSpacing: 2
+      fontFamily: 更纱黑体
+      align: [center, middle]
+      wrap: false
+      text: V1.0 · 基于 2026-09-28 定稿版框架改写 · 经双 AI 交叉评审修订
+  - elementId: footer-watermark
+    elementType: text
+    bounds: [616, 7184, 400, 36]
+    content:
+      fontSize: 24
+      fontFamily: Liter
+      color: "#F5F1E8B3"
+      align: [right, middle]
+      wrap: false
+      shadow: {blur: 12, color: "#FF3E9A66", offset: [0, 0]}
+      text: by Ivan Xue
